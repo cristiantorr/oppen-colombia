@@ -16,102 +16,105 @@ if ($relatedProducts): ?>
   <div class="relative">
     <div class="swiper swiper-relacionados">
       <div class="swiper-wrapper">
-        <!--   <div class="swiper-slide">
-            <article class="card-product category-vida">
-              <figure>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-1.jpg" alt="">
-                <div class="overflow">
-                  <a href="" class="btn-asesor">Contactar asesor</a>
-                  <div class="details">
-                    <a href="" class="btn-product">Ver producto</a>
-                    <h4>Bafle Mini Bluetooth Zip Cork</h4>
-                  </div>
+        <div class="swiper-slide">
+          <article class="card-product category-vida">
+            <figure>
+              <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-1.jpg" alt="">
+              <div class="overflow">
+                <a href="" class="btn-asesor">Contactar asesor</a>
+                <div class="details">
+                  <a href="" class="btn-product">Ver producto</a>
+                  <h4>Bafle Mini Bluetooth Zip Cork</h4>
                 </div>
-              </figure>
-              <div class="info">
-                <h5>Estilo de vida</h5>
-                <h6>Bafle Mini Bluetooth Zip Cork</h6>
               </div>
-            </article>
-          </div>
-          <div class="swiper-slide">
-            <article class="card-product category-entretenimiento">
-              <figure>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-2.jpg" alt="">
-                <div class="overflow">
-                  <a href="" class="btn-asesor">Contactar asesor</a>
-                  <div class="details">
-                    <a href="" class="btn-product">Ver producto</a>
-                    <h4>Bafle Mini Bluetooth Zip Cork</h4>
-                  </div>
+            </figure>
+            <div class="info">
+              <h5>Estilo de vida</h5>
+              <h6>Bafle Mini Bluetooth Zip Cork</h6>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card-product category-entretenimiento">
+            <figure>
+              <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-2.jpg" alt="">
+              <div class="overflow">
+                <a href="" class="btn-asesor">Contactar asesor</a>
+                <div class="details">
+                  <a href="" class="btn-product">Ver producto</a>
+                  <h4>Bafle Mini Bluetooth Zip Cork</h4>
                 </div>
-              </figure>
-              <div class="info">
-                <h5>Estilo de vida</h5>
-                <h6>Bafle Mini Bluetooth Zip Cork</h6>
               </div>
-            </article>
-          </div>
-          <div class="swiper-slide">
-            <article class="card-product category-desarrollo">
-              <figure>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-3.jpg" alt="">
-                <div class="overflow">
-                  <a href="" class="btn-asesor">Contactar asesor</a>
-                  <div class="details">
-                    <a href="" class="btn-product">Ver producto</a>
-                    <h4>Bafle Mini Bluetooth Zip Cork</h4>
-                  </div>
+            </figure>
+            <div class="info">
+              <h5>Estilo de vida</h5>
+              <h6>Bafle Mini Bluetooth Zip Cork</h6>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card-product category-desarrollo">
+            <figure>
+              <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-3.jpg" alt="">
+              <div class="overflow">
+                <a href="" class="btn-asesor">Contactar asesor</a>
+                <div class="details">
+                  <a href="" class="btn-product">Ver producto</a>
+                  <h4>Bafle Mini Bluetooth Zip Cork</h4>
                 </div>
-              </figure>
-              <div class="info">
-                <h5>Estilo de vida</h5>
-                <h6>Bafle Mini Bluetooth Zip Cork</h6>
               </div>
-            </article>
-          </div>
-          <div class="swiper-slide">
-            <article class="card-product bienestar">
-              <figure>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-4.jpg" alt="">
-                <div class="overflow">
-                  <a href="" class="btn-asesor">Contactar asesor</a>
-                  <div class="details">
-                    <a href="" class="btn-product">Ver producto</a>
-                    <h4>Bafle Mini Bluetooth Zip Cork</h4>
-                  </div>
+            </figure>
+            <div class="info">
+              <h5>Estilo de vida</h5>
+              <h6>Bafle Mini Bluetooth Zip Cork</h6>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card-product bienestar">
+            <figure>
+              <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-4.jpg" alt="">
+              <div class="overflow">
+                <a href="" class="btn-asesor">Contactar asesor</a>
+                <div class="details">
+                  <a href="" class="btn-product">Ver producto</a>
+                  <h4>Bafle Mini Bluetooth Zip Cork</h4>
                 </div>
-              </figure>
-              <div class="info">
-                <h5>Estilo de vida</h5>
-                <h6>Bafle Mini Bluetooth Zip Cork</h6>
               </div>
-            </article>
-          </div>
-          <div class="swiper-slide">
-            <article class="card-product bienestar">
-              <figure>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-4.jpg" alt="">
-                <div class="overflow">
-                  <a href="" class="btn-asesor">Contactar asesor</a>
-                  <div class="details">
-                    <a href="" class="btn-product">Ver producto</a>
-                    <h4>Bafle Mini Bluetooth Zip Cork</h4>
-                  </div>
+            </figure>
+            <div class="info">
+              <h5>Estilo de vida</h5>
+              <h6>Bafle Mini Bluetooth Zip Cork</h6>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="card-product bienestar">
+            <figure>
+              <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-4.jpg" alt="">
+              <div class="overflow">
+                <a href="" class="btn-asesor">Contactar asesor</a>
+                <div class="details">
+                  <a href="" class="btn-product">Ver producto</a>
+                  <h4>Bafle Mini Bluetooth Zip Cork</h4>
                 </div>
-              </figure>
-              <div class="info">
-                <h5>Estilo de vida</h5>
-                <h6>Bafle Mini Bluetooth Zip Cork</h6>
               </div>
-            </article>
-          </div>-->
-        <?php foreach ($relatedProducts as $relatedProduct): $relatedProductsCat = get_the_terms($relatedProduct->ID, 'products_cat'); ?>
+            </figure>
+            <div class="info">
+              <h5>Estilo de vida</h5>
+              <h6>Bafle Mini Bluetooth Zip Cork</h6>
+            </div>
+          </article>
+        </div>
+        <?php /* foreach ($relatedProducts as $relatedProduct): $relatedProductsCat = get_the_terms($relatedProduct->ID, 'products_cat'); ?>
 
           <div class="swiper-slide">
             <article class="card-product category-vida">
               <figure>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-1.jpg" alt="">
+                <?php if (has_post_thumbnail()): $featuredimgurl = get_the_post_thumbnail_url($relatedProduct->ID, 'bones-thumb-528'); ?>
+
+                  <img src="<?php echo esc_url($featuredimgurl); ?>" alt="<?php the_title_attribute(); ?>">
+                <?php endif; ?>
                 <div class="overflow">
                   <a href="#" class="btn-asesor">Contactar asesor</a>
                   <div class="details">
@@ -130,7 +133,7 @@ if ($relatedProducts): ?>
               </div>
             </article>
           </div>
-        <?php endforeach; ?>
+        <?php endforeach; */ ?>
       </div>
     </div>
     <div class="swiper-button-next next-relacionados"></div>
