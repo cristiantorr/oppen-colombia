@@ -3,10 +3,10 @@
 	<div class="swiper swiper-banner-campanas">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-	        	<figure>
-					<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/banner-camapanas.jpg" alt=""> 
+				<figure>
+					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/banner-camapanas.jpg" alt="">
 				</figure>
-			</div>			
+			</div>
 		</div>
 	</div>
 </section>
@@ -25,7 +25,7 @@
 									<input type="checkbox" id="vida" name="vida">
 									<h6>
 										<i>
-											<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-1.png" alt=""> 
+											<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-1.png" alt="">
 										</i>
 										<span>Estilo de vida</span>
 									</h6>
@@ -36,7 +36,7 @@
 									<input type="checkbox" id="desarrollo" name="desarrollo">
 									<h6>
 										<i>
-											<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-2.png" alt=""> 
+											<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-2.png" alt="">
 										</i>
 										<span>Desarrollo</span>
 									</h6>
@@ -47,7 +47,7 @@
 									<input type="checkbox" id="bienestar" name="bienestar">
 									<h6>
 										<i>
-											<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-3.png" alt=""> 
+											<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-3.png" alt="">
 										</i>
 										<span>Bienestar</span>
 									</h6>
@@ -58,7 +58,7 @@
 									<input type="checkbox" id="entretenimiento" name="entretenimiento">
 									<h6>
 										<i>
-											<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-4.png" alt=""> 
+											<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-4.png" alt="">
 										</i>
 										<span>Entretenimiento</span>
 									</h6>
@@ -70,12 +70,12 @@
 				<section class="products-portafolio">
 					<div class="search-product">
 						<input type="search" id="s" name="s" value="" placeholder="Busca en Oppen Colombia">
-    					<button type="submit" id="">Search</button>
+						<button type="submit" id="">Search</button>
 					</div>
-					<div class="grid-card-gategory">
-						<article class="card-product category-vida">
+					<!-- 	<div class="grid-card-gategory"> -->
+					<!-- 	<article class="card-product category-vida">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-1.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-1.jpg" alt=""> 
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -91,7 +91,7 @@
 						</article>
 						<article class="card-product category-entretenimiento">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-2.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-2.jpg" alt=""> 
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -107,7 +107,7 @@
 						</article>
 						<article class="card-product category-bienestar">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-3.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-3.jpg" alt=""> 
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -123,7 +123,7 @@
 						</article>
 						<article class="card-product category-desarrollo">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-4.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-4.jpg" alt=""> 
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -139,7 +139,7 @@
 						</article>
 						<article class="card-product category-bienestar">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-5.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-5.jpg" alt=""> 
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -155,7 +155,7 @@
 						</article>
 						<article class="card-product category-vida">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-6.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-6.jpg" alt=""> 
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -168,8 +168,12 @@
 								<h5>Estilo de vida</h5>
 								<h6>Bafle Mini Bluetooth Zip Cork</h6>
 							</div>
-						</article>
-					</div>					
+						</article> -->
+					<?php //ajax load more
+					// alm_templates blog.php
+
+					echo do_shortcode('[ajax_load_more id="alm-products" post_type="products" theme_repeater="products.php" container_type="div" css_classes="grid-card-gategory"  posts_per_page="6" scroll="false" transition="fade" button_label="Cargar más artículos" no_results_text="<div class=\'no-results\'>No se encontraron productos</div>"]', false); ?>
+					<!-- 	</div> -->
 				</section>
 			</div>
 		</div>
@@ -186,7 +190,7 @@
 					<div class="swiper-slide">
 						<article class="card-product category-vida">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-1.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-1.jpg" alt="">
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -199,12 +203,12 @@
 								<h5>Estilo de vida</h5>
 								<h6>Bafle Mini Bluetooth Zip Cork</h6>
 							</div>
-						</article>						
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-product category-entretenimiento">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-2.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-2.jpg" alt="">
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -217,12 +221,12 @@
 								<h5>Entretenimiento</h5>
 								<h6>Audifonos Inalámbricos</h6>
 							</div>
-						</article>						
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-product category-vida">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-6.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-6.jpg" alt="">
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -236,12 +240,12 @@
 								<h6>Bafle Mini Bluetooth Zip Cork</h6>
 							</div>
 						</article>
-						
+
 					</div>
 					<div class="swiper-slide">
 						<article class="card-product category-entretenimiento">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-5.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-5.jpg" alt="">
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -255,11 +259,11 @@
 								<h6>Audifonos Inalámbricos</h6>
 							</div>
 						</article>
-					</div>	
+					</div>
 					<div class="swiper-slide">
 						<article class="card-product category-desarrollo">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/producto-4.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/producto-4.jpg" alt="">
 								<div class="overflow">
 									<a href="" class="btn-asesor">Contactar asesor</a>
 									<div class="details">
@@ -273,20 +277,20 @@
 								<h6>Bafle Mini Bluetooth Zip Cork</h6>
 							</div>
 						</article>
-					</div>		
+					</div>
 				</div>
 			</div>
 			<div class="swiper-button-next next-relacionados"></div>
-  			<div class="swiper-button-prev prev-relacionados"></div>
+			<div class="swiper-button-prev prev-relacionados"></div>
 			<div class="swiper-pagination pagination-site pagination-relacionados"></div>
 		</div>
-		
+
 
 	</div>
-	
-</section>
-	
 
-		
-	
+</section>
+
+
+
+
 <?php get_footer(); ?>
