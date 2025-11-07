@@ -1,4 +1,12 @@
 <?php get_header(); ?>
+
+<?php
+
+$productsCat = get_terms(array(
+	'taxonomy'   => 'products_cat',
+	'hide_empty' => false,
+));
+?>
 <section class="banner-campanas relative clear-fix">
 	<div class="swiper swiper-banner-campanas">
 		<div class="swiper-wrapper">
@@ -17,10 +25,29 @@
 			<h1>Portafolio</h1>
 			<h3>Soluciones para tus planes <br>de beneficios</h3>
 			<div class="grid-portafolio-filtro">
-				<aside>
-					<div class="filter-oppen">
-						<ul>
-							<li id="" class="category-vida">
+				<?php if (!empty($productsCat) && !is_wp_error($productsCat)): $category = wp_list_pluck($productsCat, 'name'); ?>
+
+					<aside>
+						<div class="filter-oppen">
+							<ul>
+								<?php foreach ($productsCat as $product):
+									$taxcolor = get_field("tax_color", "term_" . $product->term_id);
+									$taxicon  = get_field("tax_icon", "term_" . $product->term_id);
+
+								?>
+									<li id="" class="category-vida" data-filter="<?php echo  esc_attr($product->slug); ?> ">
+										<label for="vida">
+											<input type="checkbox" id="<?php echo  esc_attr($product->slug); ?>" name="<?php echo  esc_attr($product->slug); ?>">
+											<h6 style="background-color:<?php echo esc_attr($taxcolor); ?>">
+												<i>
+													<img src="<?php echo esc_url($taxicon["url"]); ?>" alt="">
+												</i>
+												<span><?php echo  esc_html($product->name); ?></span>
+											</h6>
+										</label>
+									</li>
+								<?php endforeach; ?>
+								<!-- <li id="" class="category-vida">
 								<label for="vida">
 									<input type="checkbox" id="vida" name="vida">
 									<h6>
@@ -63,14 +90,15 @@
 										<span>Entretenimiento</span>
 									</h6>
 								</label>
-							</li>
-						</ul>
-					</div>
-				</aside>
+							</li> -->
+							</ul>
+						</div>
+					</aside>
+				<?php endif; ?>
 				<section class="products-portafolio">
 					<div class="search-product">
-						<input type="search" id="s" name="s" value="" placeholder="Busca en Oppen Colombia">
-						<button type="submit" id="">Search</button>
+						<input type="search" id="search" name="search" value="" placeholder="Busca en Oppen Colombia">
+						<button type="submit" id="search-submit">Search</button>
 					</div>
 					<!-- 	<div class="grid-card-gategory"> -->
 					<!-- 	<article class="card-product category-vida">
@@ -169,11 +197,22 @@
 								<h6>Bafle Mini Bluetooth Zip Cork</h6>
 							</div>
 						</article> -->
-					<?php //ajax load more
-					// alm_templates blog.php
-
-					echo do_shortcode('[ajax_load_more id="alm-products" post_type="products" theme_repeater="products.php" container_type="div" css_classes="grid-card-gategory"  posts_per_page="6" scroll="false" transition="fade" button_label="Cargar más artículos" no_results_text="<div class=\'no-results\'>No se encontraron productos</div>"]', false); ?>
-					<!-- 	</div> -->
+					<?php echo do_shortcode('[ajax_load_more 
+    id="alm-products"
+    post_type="products"
+    taxonomy="products_cat"
+    taxonomy_terms=""
+    taxonomy_operator="IN"
+    search=""
+    theme_repeater="products.php"
+    container_type="div"
+    css_classes="grid-card-gategory"
+    posts_per_page="6"
+    scroll="false"
+    transition="fade"
+    button_label="Cargar más artículos"
+    no_results_text="<div class=\'no-results\'>No se encontraron productos</div>"
+  ]'); ?>
 				</section>
 			</div>
 		</div>
