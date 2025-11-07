@@ -10,39 +10,45 @@
  * There are a lot of example functions and tools in here. If you don't
  * need any of it, just remove it. They are meant to be helpers and are
  * not required. It's your world baby, you can do whatever you want.
-*/
-
+ */
 
 /*
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
-*/
+ */
 function updateViewportDimensions() {
-	var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
-	return { width:x,height:y };
+  var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName("body")[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight || e.clientHeight || g.clientHeight;
+  return { width: x, height: y };
 }
 // setting the viewport width
 var viewport = updateViewportDimensions();
-
 
 /*
  * Throttle Resize-triggered Events
  * Wrap your actions in this function to throttle the frequency of firing them off, for better performance, esp. on mobile.
  * ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
-*/
+ */
 var waitForFinalEvent = (function () {
-	var timers = {};
-	return function (callback, ms, uniqueId) {
-		if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
-		if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
-		timers[uniqueId] = setTimeout(callback, ms);
-	};
+  var timers = {};
+  return function (callback, ms, uniqueId) {
+    if (!uniqueId) {
+      uniqueId = "Don't call this twice without a uniqueId";
+    }
+    if (timers[uniqueId]) {
+      clearTimeout(timers[uniqueId]);
+    }
+    timers[uniqueId] = setTimeout(callback, ms);
+  };
 })();
 
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 var timeToWaitForLast = 100;
-
 
 /*
  * Here's an example so you can see how we're using the above function
@@ -85,50 +91,48 @@ var timeToWaitForLast = 100;
  * Remember that mobile devices and javascript aren't the best of friends.
  * Keep it light and always make sure the larger viewports are doing the heavy lifting.
  *
-*/
+ */
 
 /*
  * We're going to swap out the gravatars.
  * In the functions.php file, you can see we're not loading the gravatar
  * images on mobile to save bandwidth. Once we hit an acceptable viewport
  * then we can swap out those images since they are located in a data attribute.
-*/
+ */
 function loadGravatars() {
   // set the viewport using the function above
   viewport = updateViewportDimensions();
   // if the viewport is tablet or larger, we load in the gravatars
   if (viewport.width >= 768) {
-  jQuery('.comment img[data-gravatar]').each(function(){
-    jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
-  });
-	}
+    jQuery(".comment img[data-gravatar]").each(function () {
+      jQuery(this).attr("src", jQuery(this).attr("data-gravatar"));
+    });
+  }
 } // end function
-
 
 /*
  * Put all your regular jQuery in here.
-*/
-jQuery(document).ready(function($) {
-
+ */
+jQuery(document).ready(function ($) {
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
-  */
+   */
   loadGravatars();
 
   // AOS.init();
 
-  if( jQuery('.swiper-cards-somos').length > 0 ) {
+  if (jQuery(".swiper-cards-somos").length > 0) {
     var swiper = new Swiper(".swiper-cards-somos", {
       slidesPerView: 1,
-      spaceBetween: 20,    
+      spaceBetween: 20,
       autoplay: {
         delay: 20000,
         disableOnInteraction: false,
       },
       pagination: {
         el: ".pagination-card-somos",
-        clickable: true,      
+        clickable: true,
       },
       navigation: {
         nextEl: ".next-card-somos",
@@ -136,31 +140,31 @@ jQuery(document).ready(function($) {
       },
       breakpoints: {
         640: {
-            slidesPerView: 1,
+          slidesPerView: 1,
           spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 30,
         },
       },
     });
   }
-  if( jQuery('.swiper-cards-teams').length > 0 ) {
+  if (jQuery(".swiper-cards-teams").length > 0) {
     var swiper = new Swiper(".swiper-cards-teams", {
       slidesPerView: 1,
-      spaceBetween: 20,    
+      spaceBetween: 20,
       autoplay: {
         delay: 15000,
         disableOnInteraction: false,
       },
       pagination: {
         el: ".pagination-card-teams",
-        clickable: true,      
+        clickable: true,
       },
       navigation: {
         nextEl: ".next-card-teams",
@@ -168,32 +172,32 @@ jQuery(document).ready(function($) {
       },
       breakpoints: {
         640: {
-            slidesPerView: 2,
+          slidesPerView: 2,
           spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 6,
-            spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 30,
         },
       },
     });
   }
 
-  if( jQuery('.swiper-relacionados').length > 0 ) {
+  if (jQuery(".swiper-relacionados").length > 0) {
     var swiper = new Swiper(".swiper-relacionados", {
       slidesPerView: 1,
-      spaceBetween: 20,    
+      spaceBetween: 20,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
       },
       pagination: {
         el: ".pagination-relacionados",
-        clickable: true,      
+        clickable: true,
       },
       navigation: {
         nextEl: ".next-relacionados",
@@ -201,34 +205,33 @@ jQuery(document).ready(function($) {
       },
       breakpoints: {
         640: {
-            slidesPerView: 2,
+          slidesPerView: 2,
           spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
         },
       },
     });
   }
 
-
-    if( jQuery('.swiper-brand').length > 0 ) {
+  if (jQuery(".swiper-brand").length > 0) {
     var swiper = new Swiper(".swiper-brand", {
-      slidesPerView: 'auto',    
-      loop: true,  
-      spaceBetween: 20,    
+      slidesPerView: "auto",
+      loop: true,
+      spaceBetween: 20,
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
       },
       pagination: {
         el: ".pagination-card-brand",
-        clickable: true,      
+        clickable: true,
       },
       navigation: {
         nextEl: ".next-card-brand",
@@ -236,22 +239,22 @@ jQuery(document).ready(function($) {
       },
       breakpoints: {
         640: {
-            slidesPerView: 2,
+          slidesPerView: 2,
           spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: "auto",
+          spaceBetween: 10,
         },
       },
     });
   }
-  
-  if( jQuery('.swiper-banner-home').length > 0 ) {
+
+  if (jQuery(".swiper-banner-home").length > 0) {
     var swiper = new Swiper(".swiper-banner-home", {
       spaceBetween: 0,
       effect: "fade",
@@ -261,16 +264,16 @@ jQuery(document).ready(function($) {
       },
       pagination: {
         el: ".pagination-home",
-        clickable: true,      
+        clickable: true,
       },
       navigation: {
         nextEl: ".next-home",
         prevEl: ".prev-home",
-      },    
+      },
     });
-  } 
+  }
 
-  if( jQuery('.swiper-gallery').length > 0 ) {
+  if (jQuery(".swiper-gallery").length > 0) {
     var swiper = new Swiper(".swiper-gallery", {
       spaceBetween: 0,
       effect: "fade",
@@ -280,62 +283,133 @@ jQuery(document).ready(function($) {
       },
       pagination: {
         el: ".pagination-gallery",
-        clickable: true,      
+        clickable: true,
       },
       // navigation: {
       //   nextEl: ".next-home",
       //   prevEl: ".prev-home",
-      // },    
+      // },
     });
-  } 
+  }
 
-
-  jQuery(".anchor").click(function( e ) {
-      e.preventDefault();
-      e.stopPropagation();
-      $target = $(this);
-      jQuery('html, body').animate({
-          scrollTop: jQuery($target.attr('href')).offset().top
-      }, 1000);
+  jQuery(".anchor").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $target = $(this);
+    jQuery("html, body").animate(
+      {
+        scrollTop: jQuery($target.attr("href")).offset().top,
+      },
+      1000
+    );
   });
 
-    // Menú hamburguesa
-    if( jQuery('#nav-toogle').length > 0 ) {
-        jQuery('#nav-toogle').click(function() {        
-            jQuery(this).toggleClass('open');        
-            jQuery('body').toggleClass('open-nav-xs');
-        });
-    };
+  // Menú hamburguesa
+  if (jQuery("#nav-toogle").length > 0) {
+    jQuery("#nav-toogle").click(function () {
+      jQuery(this).toggleClass("open");
+      jQuery("body").toggleClass("open-nav-xs");
+    });
+  }
 
-    if( jQuery('header nav li a').length > 0 ) {
-        jQuery('header nav li a').click(function() {  
-            jQuery('body').removeClass('open-nav-xs');      
-            jQuery('#nav-toogle').removeClass('open');
-        });
-    };
+  if (jQuery("header nav li a").length > 0) {
+    jQuery("header nav li a").click(function () {
+      jQuery("body").removeClass("open-nav-xs");
+      jQuery("#nav-toogle").removeClass("open");
+    });
+  }
 
+  // Menu responsive type accordion
+  if (screen.width < 769) {
+    jQuery("header nav ul li a").click(function () {
+      var isOpen = jQuery(this).next().is(":visible");
 
+      // Cierra todos los elementos desplegables excepto el que se está tocando
+      jQuery("header nav ul li ul").not(jQuery(this).next()).slideUp();
 
-    // Menu responsive type accordion
-    if (screen.width < 769) {
-        jQuery('header nav ul li a').click(function(){
-            var isOpen = jQuery(this).next().is(':visible');
-            
-            // Cierra todos los elementos desplegables excepto el que se está tocando
-            jQuery('header nav ul li ul').not(jQuery(this).next()).slideUp();
-            
-            // Agrega o remueve la clase "current" según el estado del elemento desplegable
-            jQuery('header nav ul li').removeClass('current');
-            if (!isOpen) {
-                jQuery(this).parent().addClass('current');
-            }
-            
-            // Alterna el estado del elemento desplegable asociado al enlace clicado
-            jQuery(this).next().slideToggle();
-        });
-    }
+      // Agrega o remueve la clase "current" según el estado del elemento desplegable
+      jQuery("header nav ul li").removeClass("current");
+      if (!isOpen) {
+        jQuery(this).parent().addClass("current");
+      }
 
+      // Alterna el estado del elemento desplegable asociado al enlace clicado
+      jQuery(this).next().slideToggle();
+    });
+  }
 
+  /**
+   * Filtro de productos
+   */
+
+  if (jQuery(".products-portafolio").length > 0) {
+    // Al hacer clic en el LI, alternamos el checkbox
+    jQuery(".filter-oppen ul li").on("click", function (e) {
+      // Evitar conflicto si se hace clic directamente sobre el input
+      if (jQuery(e.target).is("input")) return;
+
+      let checkbox = jQuery(this).find("input[type='checkbox']");
+      checkbox.prop("checked", !checkbox.prop("checked")).trigger("change");
+    });
+
+    // Cuando cambia el estado del checkbox, filtramos
+    jQuery(".filter-oppen ul li input[type='checkbox']").on(
+      "change",
+      function () {
+        let selectedTerms = [];
+
+        // Recorremos todos los que están activos
+        jQuery(".filter-oppen ul li input[type='checkbox']:checked").each(
+          function () {
+            selectedTerms.push(jQuery(this).closest("li").attr("data-filter"));
+          }
+        );
+
+        console.log("Términos seleccionados:", selectedTerms);
+
+        // Si hay al menos uno seleccionado → aplicar filtro
+        if (selectedTerms.length > 0) {
+          var data = {
+            target: "alm-products",
+            taxonomy: "products_cat",
+            taxonomyTerms: selectedTerms.join(","), // soporte para varios
+            taxonomyOperator: "IN",
+          };
+          ajaxloadmore.filter("fade", 300, data);
+        }
+        // Si ninguno está seleccionado → mostrar todo
+        else {
+          ajaxloadmore.filter("fade", 300, {
+            target: "alm-products",
+            taxonomy: "products_cat",
+            taxonomyTerms: "", // sin términos = sin filtro
+          });
+        }
+      }
+    );
+
+    let currentSearch = "";
+    jQuery("#search-submit")
+      .off("click")
+      .on("click", function (e) {
+        e.preventDefault();
+
+        currentSearch = jQuery("#search").val().trim();
+        console.log("Buscando:", currentSearch);
+
+        // Evita ejecutar si no hay nada escrito (opcional)
+        if (currentSearch.length < 2 && currentSearch.length !== 0) {
+          return;
+        }
+
+        var data = {
+          target: "alm-products", // ID de tu shortcode Ajax Load More
+          taxonomy: "products_cat",
+          taxonomyOperator: "IN",
+          search: currentSearch, // lo que escribió el usuario
+        };
+
+        ajaxloadmore.filter("fade", 300, data);
+      });
+  }
 }); /* end of as page load scripts */
-
-
