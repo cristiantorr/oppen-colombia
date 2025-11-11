@@ -5,6 +5,8 @@
 $productsCat = get_terms(array(
 	'taxonomy'   => 'products_cat',
 	'hide_empty' => false,
+	'parent'     => 0, // 🔹 Solo las categorías principales
+
 ));
 ?>
 <section class="banner-campanas relative clear-fix">
