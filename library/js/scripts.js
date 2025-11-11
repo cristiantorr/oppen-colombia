@@ -365,7 +365,7 @@ jQuery(document).ready(function ($) {
           }
         );
 
-        console.log("Términos seleccionados:", selectedTerms);
+        //console.log("Términos seleccionados:", selectedTerms);
 
         // Si hay al menos uno seleccionado → aplicar filtro
         if (selectedTerms.length > 0) {
@@ -411,5 +411,29 @@ jQuery(document).ready(function ($) {
 
         ajaxloadmore.filter("fade", 300, data);
       });
+  }
+
+  if (jQuery("#portafolio").length > 0) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get("filter");
+
+    if (!filterParam) return;
+
+    // Dividir filtros, limpiar espacios y pasar todo a minúsculas
+    const filters = filterParam.split(",").map((f) => f.trim().toLowerCase());
+
+    setTimeout(() => {
+      $(".filter-oppen ul li").each(function () {
+        const liFilter = ($(this).attr("data-filter") || "")
+          .trim()
+          .toLowerCase();
+
+        // Verificar si el valor del li está dentro de los filtros
+        if (filters.includes(liFilter)) {
+          console.log("✔ Llega filtro:", liFilter);
+          $(this).trigger("click"); // Forzar clic
+        }
+      });
+    }, 500); // puede subir a 800ms si el contenido llega después del load
   }
 }); /* end of as page load scripts */
