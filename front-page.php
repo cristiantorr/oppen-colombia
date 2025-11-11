@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<!-- Banner Desktop --> 
+<!-- Banner Desktop -->
 <section class="main-banner-home relative clear-fix">
 	<div class="wrapper-main center">
 		<div class="banner-home relative">
@@ -8,20 +8,20 @@
 					<div class="swiper-slide">
 						<div class="card-top-banner">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/banner-home.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/banner-home.jpg" alt="">
 							</figure>
 							<article>
 								<h2><span>Nuestra misión es</span> <br>potenciar la creatividad, <br>el aprendizaje y el bienestar</h2>
 								<p>a través de una oferta cuidadosamente seleccionada, diseñada para agregar valor a tu organización o proyecto.</p>
 							</article>
 						</div>
-					</div>					
+					</div>
 				</div>
 			</div>
 			<div class="swiper-button-next next-home"></div>
 			<div class="swiper-button-prev prev-home"></div>
 			<div class="swiper-pagination pagination-site pagination-home"></div>
-		</div>	
+		</div>
 	</div>
 </section>
 <section id="quienes-somos" class="main-quienes-somos relative clear-fix">
@@ -36,128 +36,128 @@
 				<div class="swiper swiper-cards-somos">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-				        	<article class="card-somos">
+							<article class="card-somos">
 								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/somos-1.jpg" alt=""> 
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
 								</figure>
 								<div class="info">
 									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
 								</div>
-							</article>	
-						</div>	
+							</article>
+						</div>
 						<div class="swiper-slide">
-				        	<article class="card-somos">
+							<article class="card-somos">
 								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/somos-1.jpg" alt=""> 
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
 								</figure>
 								<div class="info">
 									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
 								</div>
-							</article>	
-						</div>	
+							</article>
+						</div>
 						<div class="swiper-slide">
-				        	<article class="card-somos">
+							<article class="card-somos">
 								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/somos-1.jpg" alt=""> 
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
 								</figure>
 								<div class="info">
 									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
 								</div>
-							</article>	
-						</div>	
+							</article>
+						</div>
 						<div class="swiper-slide">
-				        	<article class="card-somos">
+							<article class="card-somos">
 								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/somos-1.jpg" alt=""> 
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
 								</figure>
 								<div class="info">
 									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
 								</div>
-							</article>	
-						</div>						
+							</article>
+						</div>
 					</div>
 				</div>
 				<div class="swiper-button-next next-card-somos"></div>
-	      		<div class="swiper-button-prev prev-card-somos"></div>
+				<div class="swiper-button-prev prev-card-somos"></div>
 			</div>
 			<div class="swiper-pagination pagination-site pagination-card-somos"></div>
-	    </section>
+		</section>
 	</div>
 </section>
 <section id="" class="main-teams relative clear-fix">
-	<div class="wrapper-main center">		
+	<div class="wrapper-main center">
 		<div class="main-carrousel-teams relative">
 			<div class="swiper swiper-cards-teams">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<article class="card-teams">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/equipo-1.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-1.jpg" alt="">
 							</figure>
 							<div class="info">
 								<h3>Sara Elizalde</h3>
 								<h4>Gerente</h4>
 							</div>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-teams">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/equipo-2.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-2.jpg" alt="">
 							</figure>
 							<div class="info">
 								<h3>Maria Pulgarin</h3>
 								<h4>Coordinadora admistrativa</h4>
 							</div>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-teams">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/equipo-3.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-3.jpg" alt="">
 							</figure>
 							<div class="info">
 								<h3>Jenny Elizalde</h3>
 								<h4> Ejecutiva de relacionamiento comercial</h4>
 							</div>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-teams">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/equipo-4.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-4.jpg" alt="">
 							</figure>
 							<div class="info">
 								<h3> Carlos Santos</h3>
 								<h4>Coordinador de operaciones</h4>
 							</div>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-teams">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/equipo-5.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-5.jpg" alt="">
 							</figure>
 							<div class="info">
 								<h3> Alejandra Yepes</h3>
 								<h4>Ejecutiva de relacionamiento comercial</h4>
 							</div>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-teams">
 							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/equipo-6.jpg" alt=""> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-6.jpg" alt="">
 							</figure>
 							<div class="info">
 								<h3>Didier</h3>
 								<h4>Auxiliar logístico</h4>
 							</div>
-						</article>	
+						</article>
 					</div>
-					
+
 				</div>
-			</div>			
+			</div>
 			<div class="swiper-pagination pagination-site pagination-card-teams"></div>
 		</div>
 	</div>
@@ -170,58 +170,58 @@
 			<div class="grid-portafolio">
 				<article class="card-portafolio vida">
 					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/vida-1.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-1.png" alt="">
 					</figure>
 					<div class="info">
 						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-1.png" alt=""></i>
+							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-1.png" alt=""></i>
 							<span> Estilo de vida</span>
 						</h4>
 						<p>Promueve una pausa activa que reduce el uso del plastico y el carton.</p>
-						<a href="#" class="btn-more">Ver productos</a>
+						<a href="<?php echo site_url("portafolio?filter=estilo-de-vida"); ?>" class="btn-more">Ver productos</a>
 					</div>
 				</article>
 				<article class="card-portafolio desarrollo">
 					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/vida-2.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-2.png" alt="">
 					</figure>
 					<div class="info">
 						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-2.png" alt=""></i>
+							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-2.png" alt=""></i>
 							<span>Desarrollo</span>
 						</h4>
 						<p>Facilita los procesos de formacion con herramientas de uso diario.</p>
-						<a href="#" class="btn-more">Ver productos</a>
+						<a href="<?php echo site_url("portafolio?filter=desarrollo"); ?>" class="btn-more">Ver productos</a>
 					</div>
 				</article>
 				<article class="card-portafolio bienestar">
 					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/vida-3.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-3.png" alt="">
 					</figure>
 					<div class="info">
 						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-3.png" alt=""></i>
+							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-3.png" alt=""></i>
 							<span>Bienestar</span>
 						</h4>
 						<p>Incentiva la creatividad de tu equipo con actividades a campo abierto</p>
-						<a href="#" class="btn-more">Ver productos</a>
+						<a href="<?php echo site_url("portafolio?filter=bienestar"); ?>" class="btn-more">Ver productos</a>
 					</div>
 				</article>
 				<article class="card-portafolio entretenimiento">
 					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/vida-4.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-4.png" alt="">
 					</figure>
 					<div class="info">
 						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/icon-4.png" alt=""></i>
+							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-4.png" alt=""></i>
 							<span>Entretenimiento</span>
 						</h4>
 						<p>Beneficios tan únicos como tu lista de reproduccion.</p>
-						<a href="#" class="btn-more">Ver productos</a>
+						<a href="<?php echo site_url("portafolio?filter=entretenimiento"); ?>" class="btn-more">Ver productos</a>
 					</div>
 				</article>
 			</div>
-		</div> 
+		</div>
 	</div>
 </section>
 <section id="clientes" class="main-clientes relative clear-fix">
@@ -241,60 +241,60 @@
 				<div class="swiper-wrapper">
 					<div class="	">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-1.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-1.jpg" alt="">
 							</figure>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-2.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-2.jpg" alt="">
 							</figure>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-3.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-3.jpg" alt="">
 							</figure>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-4.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-4.jpg" alt="">
 							</figure>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-5.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-5.jpg" alt="">
 							</figure>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-6.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-6.jpg" alt="">
 							</figure>
-						</article>	
+						</article>
 					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-2.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-2.jpg" alt="">
 							</figure>
-						</article>	
-					</div>	
+						</article>
+					</div>
 					<div class="swiper-slide">
 						<article class="card-brand">
-							<figure>								
-								<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/marca-3.jpg" alt="">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-3.jpg" alt="">
 							</figure>
-						</article>	
-					</div>				
+						</article>
+					</div>
 				</div>
 			</div>
 			<!-- <div class="swiper-pagination pagination-site pagination-card-brand"></div>	 -->
@@ -313,19 +313,19 @@
 			<h3>Por eso nos eligen</h3>
 			<div class="brand-aliados">
 				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/aliado-1.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-1.png" alt="">
 				</figure>
 				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/aliado-2.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-2.png" alt="">
 				</figure>
 				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/aliado-3.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-3.png" alt="">
 				</figure>
 				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/aliado-4.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-4.png" alt="">
 				</figure>
 				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/aliado-5.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-5.png" alt="">
 				</figure>
 			</div>
 		</div>
@@ -338,64 +338,64 @@
 		<section class="main-tabs-exitos">
 			<ul class="nav nav-pills" id="pills-tab" role="tablist">
 				<li class="nav-item">
-			    	<div class="items-tabs active" id="santiago-tab" data-bs-toggle="pill" data-bs-target="#santiago" type="button" role="tab" aria-controls="santiago" aria-selected="true">Santiago Loaiza lalinde Comfama</div>
-			  	</li>
-			  	<li class="nav-item">
-			    	<div class="items-tabs" id="juan-tab" data-bs-toggle="pill" data-bs-target="#juan" type="button" role="tab" aria-controls="juan" aria-selected="false">Juan Camilo Mendoza  Nubia by toral</div>
-			  	</li>
-			  	<li class="nav-item">
-			    	<div class="items-tabs" id="jannet-tab" data-bs-toggle="pill" data-bs-target="#jannet" type="button" role="tab" aria-controls="jannet" aria-selected="false">Jannet alzate Constructora serving</div>
-			  	</li>			  
+					<div class="items-tabs active" id="santiago-tab" data-bs-toggle="pill" data-bs-target="#santiago" type="button" role="tab" aria-controls="santiago" aria-selected="true">Santiago Loaiza lalinde Comfama</div>
+				</li>
+				<li class="nav-item">
+					<div class="items-tabs" id="juan-tab" data-bs-toggle="pill" data-bs-target="#juan" type="button" role="tab" aria-controls="juan" aria-selected="false">Juan Camilo Mendoza Nubia by toral</div>
+				</li>
+				<li class="nav-item">
+					<div class="items-tabs" id="jannet-tab" data-bs-toggle="pill" data-bs-target="#jannet" type="button" role="tab" aria-controls="jannet" aria-selected="false">Jannet alzate Constructora serving</div>
+				</li>
 			</ul>
 			<div class="tab-content" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="santiago" role="tabpanel" aria-labelledby="santiago-tab" tabindex="0">
 					<article class="card-extios">
 						<figure>
-							<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/caso-1.jpg" alt="">
+							<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1.jpg" alt="">
 						</figure>
 						<div class="info">
 							<p>“Oppen se ha consolidado como un aliado estratégico para La caja de comensación en el fortalecimiento de nuestra oferta corporativa. Su versatilidad, agilidad y compromiso con la calidad se reflejan en cada servicio y producto que nos brindan, aportando valor y confianza en cada entrega”</p>
 							<div class="avatar">
 								<i>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/caso-1-avatar.png" alt="">
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1-avatar.png" alt="">
 								</i>
 								<h6>Santiago Loaiza lalinde Comfama</h6>
-							</div>	
+							</div>
 						</div>
 					</article>
 				</div>
 				<div class="tab-pane fade" id="juan" role="tabpanel" aria-labelledby="juan-tab" tabindex="0">
 					<article class="card-extios">
 						<figure>
-							<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/caso-2.jpg" alt="">
+							<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-2.jpg" alt="">
 						</figure>
 						<div class="info">
 							<p>“Oppen Colombia sigue marcando la diferencia con su compromiso, calidad y trabajo responsable. ¡Un gran ejemplo de mejora continua!”</p>
 							<div class="avatar">
 								<i>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/caso-2-avatar.png" alt="">
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-2-avatar.png" alt="">
 								</i>
 								<h6>Juan Camilo Mendoza Nubia by toral</h6>
-							</div>	
+							</div>
 						</div>
 					</article>
 				</div>
 				<div class="tab-pane fade" id="jannet" role="tabpanel" aria-labelledby="jannet-tab" tabindex="0">
 					<article class="card-extios">
 						<figure>
-							<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/caso-1.jpg" alt="">
+							<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1.jpg" alt="">
 						</figure>
 						<div class="info">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eaque, laborum ipsam illum nam doloremque! Quo illo, aspernatur sequi recusandae aperiam magnam quidem quod beatae earum fugit iste animi pariatur.</p>
 							<div class="avatar">
 								<i>
-									<img src="<?php echo get_stylesheet_directory_uri(). '/library/' ?>images/caso-1-avatar.png" alt="">
+									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1-avatar.png" alt="">
 								</i>
 								<h6>Jannet alzate Constructora serving</h6>
-							</div>	
+							</div>
 						</div>
 					</article>
-				</div>			  
+				</div>
 			</div>
 		</section>
 
@@ -469,6 +469,6 @@
 		</div>
 	</div>
 </section>
-		
-	
+
+
 <?php get_footer(); ?>
