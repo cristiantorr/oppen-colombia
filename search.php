@@ -1,74 +1,45 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<div class="container my-5">
+  <h1 class="mb-4">Resultados de búsqueda: "<?php echo get_search_query(); ?>"</h1>
 
-				<div id="inner-content" class="wrap cf">
+  <?php if ( have_posts() ) : ?>
+    <div class="row g-4">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <div class="col-md-4 col-sm-6">
+          <div class="card h-100 shadow-sm border-0">
+            <?php if ( has_post_thumbnail() ) : ?>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
+              </a>
+            <?php endif; ?>
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><?php the_title(); ?></h5>
+              <p class="card-text text-muted mb-4">
+                <?php echo wp_trim_words( get_the_excerpt(), 20 ); ?>
+              </p>
+              <a href="<?php the_permalink(); ?>" class="btn btn-primary mt-auto" style="background: #8d5394;border: none;">Ver más</a>
+            </div>
+          </div>
+        </div>
+      <?php endwhile; ?>
+    </div>
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <div class="mt-5">
+      <?php the_posts_pagination(); ?>
+    </div>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+  <?php else : ?>
+    <p>No se encontraron resultados para tu búsqueda.</p>
+  <?php endif; ?>
 
-								<header class="entry-header article-header">
-
-									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-
-                  						<p class="byline entry-meta vcard">
-                    							<?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
-                   							    /* the time the post was published */
-                   							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                      							    /* the author of the post */
-                       							    '<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
-                  						</p>
-
-								</header>
-
-								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
-                  					<?php endif; ?>
-
-                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer> <!-- end article footer -->
-
-							</article>
-
-						<?php endwhile; ?>
-
-								<?php bones_page_navi(); ?>
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</main>
-
-							<?php get_sidebar(); ?>
-
-					</div>
-
-			</div>
+ 
+  <div class="text-center mt-5">
+    <a href="<?php echo home_url('/'); ?>" class="btn btn-primary mx-2" style="background: #e8ddea;border: none;color: #000000;">Ir al Home</a>
+    <a href="<?php echo home_url('/portafolio'); ?>" class="btn btn-primary mx-2" style="background: #ff7800;border: none;">Ir al Portafolio</a>
+  </div>
+</div>
 
 <?php get_footer(); ?>
+
