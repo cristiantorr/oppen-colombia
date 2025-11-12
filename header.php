@@ -63,9 +63,16 @@
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<?php
+	$bannerPauta = get_field('pauta', 'option');
+
+	?>
 	<section class="banner-pauta full clear-fix">
 		<figure>
-			<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/banner-pauta.jpg" alt="">
+			<img src="<?php echo ($bannerPauta)
+									? esc_url($bannerPauta["url"])
+									: get_stylesheet_directory_uri() . '/library/images/banner-pauta.jpg'; ?>" alt="Banner pauta">
+
 		</figure>
 	</section>
 	<header class="full clear-fix">
@@ -83,14 +90,25 @@
 				</a>
 			</figure>
 			<nav class="main-nav">
-				<ul>
-					<li><a href="#quienes-somos">Quienes somos</a></li>
-					<li><a href="#portafolio">Portafolio</a></li>
-					<li><a href="#clientes">Clientes</a></li>
-					<li><a href="#aliados">Aliados</a></li>
-					<li><a href="#casos-exito">Casos de éxito</a></li>
+				<!-- 	<ul>
+					<li><a href="<?php echo home_url(); ?>#quienes-somos">Quienes somos</a></li>
+					<li><a href="<?php echo home_url(); ?>#portafolio">Portafolio</a></li>
+					<li><a href="<?php echo home_url(); ?>#clientes">Clientes</a></li>
+					<li><a href="<?php echo home_url(); ?>#aliados">Aliados</a></li>
+					<li><a href="<?php echo home_url(); ?>#casos-exito">Casos de éxito</a></li>
 					<li class="btn-contacto"><a href="#contacto">Contacto</a></li>
-				</ul>
+				</ul> -->
+				<?php if (has_nav_menu('main-nav')): ?>
+
+					<?php wp_nav_menu(array(
+						'theme_location' => 'main-nav',
+						'menu_class' => false,
+						'container' => '',
+						'container_class' => '',
+						'items_wrap' => '<ul id="%1s" class="%2s">%3$s</ul>',
+					)); ?>
+
+				<?php endif; ?>
 			</nav>
 			<div class="cont-search">
 				<?php echo get_search_form(); ?>
