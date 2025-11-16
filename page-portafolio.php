@@ -5,7 +5,7 @@
 $productsCat = get_terms(array(
 	'taxonomy'   => 'products_cat',
 	'hide_empty' => false,
-	'parent'     => 0, // 🔹 Solo las categorías principales
+	'parent'     => 0,
 
 ));
 ?>
@@ -42,7 +42,7 @@ $productsCat = get_terms(array(
 											<input type="checkbox" id="<?php echo  esc_attr($product->slug); ?>" name="<?php echo  esc_attr($product->slug); ?>">
 											<h6 style="background-color:<?php echo esc_attr($taxcolor); ?>">
 												<i>
-													<img src="<?php echo esc_url($taxicon["url"]); ?>" alt="">
+													<img src="<?php echo esc_url($taxicon["url"]); ?>" alt="<?php echo esc_attr($taxicon["title"]); ?>">
 												</i>
 												<span><?php echo  esc_html($product->name); ?></span>
 											</h6>
@@ -209,7 +209,7 @@ $productsCat = get_terms(array(
     theme_repeater="products.php"
     container_type="div"
     css_classes="grid-card-gategory"
-    posts_per_page="6"
+    posts_per_page="12"
     scroll="false"
     transition="fade"
     button_label="Cargar más artículos"
