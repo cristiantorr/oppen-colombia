@@ -4,7 +4,7 @@ $currentID = (isset($args['currentID']) && $args['currentID'] !== '') ? $args['c
 
 $args = [
   'post_type' => 'products',
-  'numberposts' => -1,
+  'numberposts' => 10,
   'order' => 'DESC',
   'exclude' => $currentID,
 ];

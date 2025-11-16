@@ -5,6 +5,11 @@ if (function_exists('get_field')):
 
   $detailProduct = get_field("detail_prod");
   $productsCat = get_the_terms(get_the_ID(), 'products_cat');
+  $productName = get_the_title();
+
+  $phone = '573218033728';
+  $mensaje = urlencode("Hola OPPEN Colombia!, deseo saber más información del producto: $productName");
+  $whatsapp_url = "https://wa.me/$phone?text=$mensaje";
 
   if (!empty($detailProduct)):
     $prodGalleries = $detailProduct["prod_gallery"]; ?>
@@ -48,7 +53,7 @@ if (function_exists('get_field')):
             <?php if (!empty($detailProduct["prod_list"])) {
               echo wp_kses_post($detailProduct["prod_list"]);
             }; ?>
-            <a href="https://wa.me/+573218033728" target="_blank" class="btn-asesor">Contactar asesor</a>
+            <a href="<?php echo esc_url($whatsapp_url); ?>" target="_blank" class="btn-asesor">Contactar asesor</a>
           </article>
         </div>
       </div>
