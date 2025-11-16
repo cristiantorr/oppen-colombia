@@ -1,336 +1,280 @@
 <?php get_header(); ?>
 <!-- Banner Desktop -->
-<section class="main-banner-home relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="banner-home relative">
-			<div class="swiper swiper-banner-home">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="card-top-banner">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/banner-home.jpg" alt="">
-							</figure>
-							<article>
-								<h2><span>Nuestra misión es</span> <br>potenciar la creatividad, <br>el aprendizaje y el bienestar</h2>
-								<p>a través de una oferta cuidadosamente seleccionada, diseñada para agregar valor a tu organización o proyecto.</p>
-							</article>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-button-next next-home"></div>
-			<div class="swiper-button-prev prev-home"></div>
-			<div class="swiper-pagination pagination-site pagination-home"></div>
-		</div>
-	</div>
-</section>
-<section id="quienes-somos" class="main-quienes-somos relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="leyengd">
-			<h2>Quienes somos</h2>
-			<p>Transformamos las necesidades de bienestar laboral de las pyme en colombia <br>en soluciones personalizadas. Nos especializamos en ofrecer prod uctos únicos <br>en las áreas de wellness, artes y hobbies, estilo de vida, educación y recreación, <br>adaptándonos a los requerimientos específicos de cada cliente.</p>
-		</div>
-		<div class="clr"></div>
-		<section class="main-swiper-card clear-fix relative">
-			<div class="relative">
-				<div class="swiper swiper-cards-somos">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<article class="card-somos">
-								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
-								</figure>
-								<div class="info">
-									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
-								</div>
-							</article>
-						</div>
-						<div class="swiper-slide">
-							<article class="card-somos">
-								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
-								</figure>
-								<div class="info">
-									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
-								</div>
-							</article>
-						</div>
-						<div class="swiper-slide">
-							<article class="card-somos">
-								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
-								</figure>
-								<div class="info">
-									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
-								</div>
-							</article>
-						</div>
-						<div class="swiper-slide">
-							<article class="card-somos">
-								<figure>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/somos-1.jpg" alt="">
-								</figure>
-								<div class="info">
-									<p>Acompañamos con soluciones sus políticas de fidelización laboral.</p>
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-button-next next-card-somos"></div>
-				<div class="swiper-button-prev prev-card-somos"></div>
-			</div>
-			<div class="swiper-pagination pagination-site pagination-card-somos"></div>
-		</section>
-	</div>
-</section>
-<section id="" class="main-teams relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="main-carrousel-teams relative">
-			<div class="swiper swiper-cards-teams">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<article class="card-teams">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-1.jpg" alt="">
-							</figure>
-							<div class="info">
-								<h3>Sara Elizalde</h3>
-								<h4>Gerente</h4>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-teams">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-2.jpg" alt="">
-							</figure>
-							<div class="info">
-								<h3>Maria Pulgarin</h3>
-								<h4>Coordinadora admistrativa</h4>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-teams">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-3.jpg" alt="">
-							</figure>
-							<div class="info">
-								<h3>Jenny Elizalde</h3>
-								<h4> Ejecutiva de relacionamiento comercial</h4>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-teams">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-4.jpg" alt="">
-							</figure>
-							<div class="info">
-								<h3> Carlos Santos</h3>
-								<h4>Coordinador de operaciones</h4>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-teams">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-5.jpg" alt="">
-							</figure>
-							<div class="info">
-								<h3> Alejandra Yepes</h3>
-								<h4>Ejecutiva de relacionamiento comercial</h4>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-teams">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/equipo-6.jpg" alt="">
-							</figure>
-							<div class="info">
-								<h3>Didier</h3>
-								<h4>Auxiliar logístico</h4>
-							</div>
-						</article>
-					</div>
 
-				</div>
-			</div>
-			<div class="swiper-pagination pagination-site pagination-card-teams"></div>
-		</div>
-	</div>
-</section>
-<section id="portafolio" class="relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="main-portafolio">
-			<h2>Portafolio</h2>
-			<h3>Soluciones para tus planes <br>de beneficios</h3>
-			<div class="grid-portafolio">
-				<article class="card-portafolio vida">
-					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-1.png" alt="">
-					</figure>
-					<div class="info">
-						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-1.png" alt=""></i>
-							<span> Estilo de vida</span>
-						</h4>
-						<p>Promueve una pausa activa que reduce el uso del plastico y el carton.</p>
-						<a href="<?php echo site_url("portafolio?filter=estilo-de-vida"); ?>" class="btn-more">Ver productos</a>
-					</div>
-				</article>
-				<article class="card-portafolio desarrollo">
-					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-2.png" alt="">
-					</figure>
-					<div class="info">
-						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-2.png" alt=""></i>
-							<span>Desarrollo</span>
-						</h4>
-						<p>Facilita los procesos de formacion con herramientas de uso diario.</p>
-						<a href="<?php echo site_url("portafolio?filter=desarrollo"); ?>" class="btn-more">Ver productos</a>
-					</div>
-				</article>
-				<article class="card-portafolio bienestar">
-					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-3.png" alt="">
-					</figure>
-					<div class="info">
-						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-3.png" alt=""></i>
-							<span>Bienestar</span>
-						</h4>
-						<p>Incentiva la creatividad de tu equipo con actividades a campo abierto</p>
-						<a href="<?php echo site_url("portafolio?filter=bienestar"); ?>" class="btn-more">Ver productos</a>
-					</div>
-				</article>
-				<article class="card-portafolio entretenimiento">
-					<figure>
-						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/vida-4.png" alt="">
-					</figure>
-					<div class="info">
-						<h4>
-							<i><img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/icon-4.png" alt=""></i>
-							<span>Entretenimiento</span>
-						</h4>
-						<p>Beneficios tan únicos como tu lista de reproduccion.</p>
-						<a href="<?php echo site_url("portafolio?filter=entretenimiento"); ?>" class="btn-more">Ver productos</a>
-					</div>
-				</article>
-			</div>
-		</div>
-	</div>
-</section>
-<section id="clientes" class="main-clientes relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="leyengd">
-			<h2>Nuestros clientes</h2>
-			<h3> Relacionamiento Estratégico:</h3>
-			<p>Entendimiento a profundidad de los canales lo que nos permite entender las necesidades y diseñar producto acorde a la solución en tiempos y costos eficientes para la operación, la estructura liviana de nuestra organización nos permite una rápida adaptación a las condiciones del mercado.</p>
-			<div class="display">
-				<p>Somos la central de compras que agiliza sus procesos <br> de búsqueda y aplana el esfuerzo administrativo <br>de contar con varios proveedores.</p>
-			</div>
-			<h4>Por esto nos eligen</h4>
-		</div>
-		<div class="clr"></div>
-		<div class="relative main-slide-brands">
-			<div class="swiper swiper-brand">
-				<div class="swiper-wrapper">
-					<div class="	">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-1.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-2.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-3.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-4.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-5.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-6.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-2.jpg" alt="">
-							</figure>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="card-brand">
-							<figure>
-								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/marca-3.jpg" alt="">
-							</figure>
-						</article>
+<?php
+$bannerSection = get_field("banner_section");
+
+
+if ($bannerSection && $bannerSection['enable_section'] && !empty($bannerSection["banners"])):
+	$banners = $bannerSection["banners"]; ?>
+
+	<section class="main-banner-home relative clear-fix">
+		<div class="wrapper-main center">
+			<div class="banner-home relative">
+				<div class="swiper swiper-banner-home">
+					<div class="swiper-wrapper">
+						<?php foreach ($banners as $banner):
+							$image = $banner["image"]; ?>
+							<div class="swiper-slide">
+								<div class="card-top-banner">
+									<?php if ($image): ?>
+										<figure>
+											<img src="<?php echo esc_url($image["url"]); ?>" alt="<?php echo esc_attr($image["title"]); ?>">
+										</figure>
+									<?php endif; ?>
+									<?php if (!empty($banner["title_one"]) ||  !empty($banner["title_two"]) ||  !empty($banner["description"])): ?>
+										<article>
+											<?php if (!empty($banner["title_one"]) ||  !empty($banner["title_two"])): ?>
+
+												<h2><span><?php echo esc_html($banner["title_one"]); ?></span><br> <?php echo $banner["title_two"]; ?></h2>
+											<?php endif; ?>
+											<?php if (!empty($banner["description"])): ?>
+												<p><?php echo wp_kses_post($banner["description"]); ?></p>
+											<?php endif; ?>
+										</article>
+									<?php endif; ?>
+								</div>
+							</div>
+						<?php endforeach; ?>
 					</div>
 				</div>
-			</div>
-			<!-- <div class="swiper-pagination pagination-site pagination-card-brand"></div>	 -->
-		</div>
-	</div>
-</section>
-<section id="aliados" class="main-aliados relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="oppen-alidos">
-			<h2>Nuestros aliados</h2>
-			<h3> Enfoque sostenible:</h3>
-			<p>Poderoso movilizador de la innovación en el desarrollo de productos, impulsando una nueva <br> mentalidad centrada en una economia circular que favorece a los productores <br>de las pequeñas y medianas industrias de Colombia. </p>
-			<div class="display">
-				<p>Esto nos ha llevado a desarrollar una red de proveedores comprometidos en frentes ambientales, sociales y culturales transformandolos en productos y servicios de consumo institucional, considerando todo el ciclo de vida del producto, desde su diseño hasta su eventual reciclaje o reutilización.</p>
-			</div>
-			<h3>Por eso nos eligen</h3>
-			<div class="brand-aliados">
-				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-1.png" alt="">
-				</figure>
-				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-2.png" alt="">
-				</figure>
-				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-3.png" alt="">
-				</figure>
-				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-4.png" alt="">
-				</figure>
-				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/aliado-5.png" alt="">
-				</figure>
+				<div class="swiper-button-next next-home"></div>
+				<div class="swiper-button-prev prev-home"></div>
+				<div class="swiper-pagination pagination-site pagination-home"></div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+<?php endif; ?>
+<?php
+$aboutSection = get_field("about_section");
+
+
+if ($aboutSection && $aboutSection['enable_section'] && !empty($aboutSection["banners"])):
+	$aboutDescription = $aboutSection["description"];
+	$banners = $aboutSection["banners"]; ?>
+
+	<section id="quienes-somos" class="main-quienes-somos relative clear-fix">
+		<div class="wrapper-main center">
+			<?php if (!empty($aboutDescription)): ?>
+				<div class="leyengd">
+					<?php echo wp_kses_post($aboutDescription); ?>
+				</div>
+			<?php endif; ?>
+			<div class="clr"></div>
+			<section class="main-swiper-card clear-fix relative">
+				<div class="relative">
+					<div class="swiper swiper-cards-somos">
+						<div class="swiper-wrapper">
+							<?php foreach ($banners as $banner):
+								$image = $banner["image"];
+								$aboutDescription = $banner["description"]; ?>
+								<div class="swiper-slide">
+									<article class="card-somos">
+										<?php if ($image): ?>
+											<figure>
+												<img src="<?php echo esc_url($image["url"]); ?>" alt="<?php echo esc_attr($image["title"]); ?>">
+											</figure>
+										<?php endif; ?>
+										<?php if (!empty($aboutDescription)): ?>
+											<div class="info">
+												<?php echo wp_kses_post($aboutDescription); ?>
+											</div>
+										<?php endif; ?>
+									</article>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+					<div class="swiper-button-next next-card-somos"></div>
+					<div class="swiper-button-prev prev-card-somos"></div>
+				</div>
+				<div class="swiper-pagination pagination-site pagination-card-somos"></div>
+			</section>
+
+		</div>
+	</section>
+<?php endif; ?>
+<?php
+$teams = get_field("team_section");
+
+
+if ($teams && $teams['enable_section'] && !empty($teams["peoples"])):
+	$peoples = $teams["peoples"];
+?>
+	<section id="" class="main-teams relative clear-fix">
+		<div class="wrapper-main center">
+			<div class="main-carrousel-teams relative">
+				<div class="swiper swiper-cards-teams">
+					<div class="swiper-wrapper">
+						<?php foreach ($peoples as $people):
+							$image = $people["image"];
+							$peopleDescription = $people["description"]; ?>
+							<div class="swiper-slide">
+								<article class="card-teams">
+									<?php if ($image): ?>
+										<figure>
+											<img src="<?php echo esc_url($image["url"]); ?>" alt="<?php echo esc_attr($image["title"]); ?>">
+										</figure>
+									<?php endif; ?>
+									<?php if (!empty($peopleDescription)): ?>
+
+										<div class="info">
+
+											<?php echo wp_kses_post($peopleDescription); ?>
+
+										</div>
+									<?php endif; ?>
+								</article>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+				<div class="swiper-pagination pagination-site pagination-card-teams"></div>
+			</div>
+		</div>
+	</section>
+<?php endif; ?>
+<?php
+$categories = get_field("categories_section");
+
+
+if ($categories && $categories['enable_section'] && !empty($categories["choice_categories"])):
+	$choiceCategories = $categories["choice_categories"];
+
+?>
+	<section id="portafolio" class="relative clear-fix">
+		<div class="wrapper-main center">
+			<div class="main-portafolio">
+				<?php if (!empty($categories["litle_title"])): ?>
+					<h2><?php echo esc_html($categories["litle_title"]); ?></h2>
+				<?php endif; ?>
+				<?php if (!empty($categories["big_title"])): ?>
+
+					<h3><?php echo wp_kses_post($categories["big_title"]); ?></h3>
+				<?php endif; ?>
+
+				<div class="grid-portafolio">
+					<?php foreach ($choiceCategories as $category):
+						$taxcolor = get_field("tax_color", "term_" . $category->term_id);
+						$taxicon  = get_field("tax_icon", "term_" . $category->term_id);
+						$taximage  = get_field("tax_image", "term_" . $category->term_id); ?>
+						<article class="card-portafolio vida" style="background-color:<?php echo esc_attr($taxcolor); ?>">
+							<figure>
+								<img src="<?php echo esc_url($taximage["url"]); ?>" alt="">
+							</figure>
+							<div class="info">
+								<h4>
+									<i><img src="<?php echo esc_url($taxicon["url"]); ?>" alt="<?php echo esc_attr($taxicon["title"]); ?>"></i>
+									<span> <?php echo esc_html($category->name); ?></span>
+								</h4>
+								<p><?php echo wp_kses_post($category->description); ?></p>
+
+								<a href="<?php echo site_url("portafolio?filter=estilo-de-vida"); ?>" class="btn-more">Ver productos</a>
+							</div>
+						</article>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+<?php endif; ?>
+<?php
+$clients = get_field("clients_section");
+
+
+if ($clients && $clients['enable_section']):
+
+
+?>
+	<section id="clientes" class="main-clientes relative clear-fix">
+		<div class="wrapper-main center">
+			<div class="leyengd">
+				<?php if (!empty($clients["litle_title"])): ?>
+					<h2><?php echo esc_html($clients["litle_title"]); ?></h2>
+				<?php endif; ?>
+				<?php if (!empty($clients["description"])) {
+
+					echo wp_kses_post($clients["description"]);
+				} ?>
+				<?php if (!empty($clients["description_desc"])) : ?>
+
+					<div class="display">
+						<?php echo wp_kses_post($clients["description_desc"]); ?>
+					</div>
+				<?php endif; ?>
+				<?php if (!empty($clients["title_brand"])): ?>
+					<h4><?php echo esc_html($clients["title_brand"]); ?></h4>
+				<?php endif; ?>
+			</div>
+			<div class="clr"></div>
+			<?php if (!empty($clients["brands"])):
+				$brands = $clients["brands"]; ?>
+				<div class="relative main-slide-brands">
+					<div class="swiper swiper-brand">
+						<div class="swiper-wrapper">
+							<?php foreach ($brands as $brand):
+								$brandImage = $brand["brand_image"]; ?>
+								<div class="swiper-slide">
+									<article class="card-brand">
+										<figure>
+											<img src="<?php echo esc_url($brandImage["url"]); ?>" alt="<?php echo esc_attr($brandImage["title"]); ?>">
+										</figure>
+									</article>
+								</div>
+							<?php endforeach; ?>
+
+						</div>
+					</div>
+					<!-- <div class="swiper-pagination pagination-site pagination-card-brand"></div>	 -->
+				</div>
+			<?php endif; ?>
+		</div>
+	</section>
+<?php endif; ?>
+<?php
+$allies = get_field("allies_section");
+
+
+if ($allies && $allies['enable_section']):
+
+
+?>
+	<section id="aliados" class="main-aliados relative clear-fix">
+		<div class="wrapper-main center">
+			<div class="oppen-alidos" style="background: #c6ebe2 url('<?php echo esc_url($allies['back_image']['url']); ?>') no-repeat top center; background-size: contain;">
+				<?php if (!empty($allies["litle_title"])): ?>
+					<h2><?php echo esc_html($clients["litle_title"]); ?></h2>
+				<?php endif; ?>
+				<?php if (!empty($allies["description"])) {
+
+					echo wp_kses_post($allies["description"]);
+				} ?>
+				<?php if (!empty($allies["description_desc"])) : ?>
+
+					<div class="display">
+						<?php echo wp_kses_post($allies["description_desc"]); ?>
+					</div>
+				<?php endif; ?>
+				<?php if (!empty($allies["title_brand"])): ?>
+
+					<h3><?php echo esc_html($allies["title_brand"]); ?></h3>
+				<?php endif; ?>
+				<?php if (!empty($allies["brands"])): $brands = $allies["brands"]; ?>
+
+					<div class="brand-aliados">
+						<?php foreach ($brands as $brand):
+							$brandImage = $brand["brand_image"]; ?>
+							<figure>
+								<img src="<?php echo esc_url($brandImage["url"]); ?>" alt="<?php echo esc_attr($brandImage["title"]); ?>">
+							</figure>
+						<?php endforeach; ?>
+
+					</div>
+				<?php endif; ?>
+			</div>
+		</div>
+	</section>
+<?php endif; ?>
 <section id="casos-exito" class="main-casos relative clear-fix">
 	<div class="wrapper-main center">
 		<h2>Casos de éxito</h2>
@@ -428,43 +372,8 @@
 				</div>
 			</arcicle>
 			<div class="main-form">
-				<div class="input">
-					<input type="text" placeholder="Nombre">
-				</div>
-				<div class="input">
-					<input type="text" placeholder="Empresa">
-				</div>
-				<div class="input">
-					<input type="email" placeholder="Correo corporativo">
-				</div>
-				<div class="input">
-					<input type="tel" placeholder="Teléfono">
-				</div>
-				<div class="input">
-					<select name="" id="">
-						<option value="">Selecciona una ciudad</option>
-						<option value="bogota">Bogotá</option>
-						<option value="medellin">Medellín</option>
-						<option value="cali">Cali</option>
-						<option value="barranquilla">Barranquilla</option>
-						<option value="cartagena">Cartagena</option>
-						<option value="cucuta">Cúcuta</option>
-						<option value="bucaramanga">Bucaramanga</option>
-						<option value="pereira">Pereira</option>
-						<option value="santa-marta">Santa Marta</option>
-						<option value="ibague">Ibagué</option>
-						<option value="ibague">Otra</option>
-					</select>
-				</div>
-				<div class="input">
-					<input type="number" placeholder="Número de empleados">
-				</div>
-				<div class="input">
-					<textarea name="" id="" placeholder="Mensaje"></textarea>
-				</div>
-				<label for="acepto"><input type="checkbox" id="acepto" name="acepto" /> Acepto la <a href="">política de privacidad</a></label>
-				<div class="clr"></div>
-				<input type="submit" value="ENVIAR">
+				<?php echo do_shortcode("[contact-form-7 id='d8a378c' title='Formulario de contacto']"); //echo do_shortcode("[contact-form-7 id='c019156' title='Formulario de contacto']"); 
+				?>
 			</div>
 		</div>
 	</div>
