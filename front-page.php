@@ -275,109 +275,184 @@ if ($allies && $allies['enable_section']):
 		</div>
 	</section>
 <?php endif; ?>
-<section id="casos-exito" class="main-casos relative clear-fix">
-	<div class="wrapper-main center">
-		<h2>Casos de éxito</h2>
+<?php
+$cases = get_field("cases_section");
 
-		<section class="main-tabs-exitos">
-			<ul class="nav nav-pills" id="pills-tab" role="tablist">
-				<li class="nav-item">
-					<div class="items-tabs active" id="santiago-tab" data-bs-toggle="pill" data-bs-target="#santiago" type="button" role="tab" aria-controls="santiago" aria-selected="true">Santiago Loaiza lalinde Comfama</div>
-				</li>
-				<li class="nav-item">
-					<div class="items-tabs" id="juan-tab" data-bs-toggle="pill" data-bs-target="#juan" type="button" role="tab" aria-controls="juan" aria-selected="false">Juan Camilo Mendoza Nubia by toral</div>
-				</li>
-				<li class="nav-item">
-					<div class="items-tabs" id="jannet-tab" data-bs-toggle="pill" data-bs-target="#jannet" type="button" role="tab" aria-controls="jannet" aria-selected="false">Jannet alzate Constructora serving</div>
-				</li>
-			</ul>
-			<div class="tab-content" id="pills-tabContent">
-				<div class="tab-pane fade show active" id="santiago" role="tabpanel" aria-labelledby="santiago-tab" tabindex="0">
-					<article class="card-extios">
-						<figure>
-							<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1.jpg" alt="">
-						</figure>
-						<div class="info">
-							<p>“Oppen se ha consolidado como un aliado estratégico para La caja de comensación en el fortalecimiento de nuestra oferta corporativa. Su versatilidad, agilidad y compromiso con la calidad se reflejan en cada servicio y producto que nos brindan, aportando valor y confianza en cada entrega”</p>
-							<div class="avatar">
-								<i>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1-avatar.png" alt="">
-								</i>
-								<h6>Santiago Loaiza lalinde Comfama</h6>
-							</div>
+
+if ($cases && $cases['enable_section'] && !empty($cases["items"])):
+	$items = $cases["items"];
+
+?>
+	<section id="casos-exito" class="main-casos relative clear-fix">
+		<div class="wrapper-main center">
+			<?php if (!empty($cases["section_title"])): ?>
+				<h2><?php echo esc_html($cases["section_title"]); ?></h2>
+			<?php endif; ?>
+			<section class="main-tabs-exitos">
+				<ul class="nav nav-pills" id="pills-tab" role="tablist">
+					<?php foreach ($items as $index => $item): ?>
+						<li class="nav-item">
+							<div class="items-tabs <?php echo ($index === 0) ? 'active' : null; ?>" id="username-<?php echo $index; ?>-tab" data-bs-toggle="pill" data-bs-target="#username-<?php echo $index; ?>" type="button" role="tab" aria-controls="username-<?php echo $index; ?>" aria-selected="<?php echo ($index === 0) ? 'true' : 'false'; ?>"><?php echo esc_html($item["item_title"]); ?></div>
+						</li>
+					<?php endforeach; ?>
+					<!-- <li class="nav-item">
+						<div class="items-tabs active" id="santiago-tab" data-bs-toggle="pill" data-bs-target="#santiago" type="button" role="tab" aria-controls="santiago" aria-selected="true">Santiago Loaiza lalinde Comfama</div>
+					</li>
+						<li class="nav-item">
+						<div class="items-tabs" id="juan-tab" data-bs-toggle="pill" data-bs-target="#juan" type="button" role="tab" aria-controls="juan" aria-selected="false">Juan Camilo Mendoza Nubia by toral</div>
+					</li>
+					<li class="nav-item">
+						<div class="items-tabs" id="jannet-tab" data-bs-toggle="pill" data-bs-target="#jannet" type="button" role="tab" aria-controls="jannet" aria-selected="false">Jannet alzate Constructora serving</div>
+					</li> -->
+				</ul>
+				<div class="tab-content" id="pills-tabContent">
+					<?php foreach ($items as $index => $item):
+						$itemimage = $item["info_image"];
+						$itemImageAuthor = $item["info_image_author"];
+					?>
+
+						<div class="tab-pane fade  <?php echo ($index === 0) ? 'show active' : null; ?>" id="username-<?php echo $index; ?>" role="tabpanel" aria-labelledby="username-<?php echo $index; ?>-tab" tabindex="0">
+							<article class="card-extios">
+								<figure>
+									<img src="<?php echo esc_url($itemimage["url"]); ?>" alt="<?php echo esc_attr($itemimage["title"]); ?>">
+								</figure>
+								<div class="info">
+									<?php if (!empty($item["description"])): ?>
+										<p><?php echo wp_kses_post($item["description"]); ?></p>
+									<?php endif; ?>
+									<div class="avatar">
+										<i>
+											<img src="<?php echo esc_url($itemImageAuthor["url"]); ?>" alt="<?php echo esc_attr($itemImageAuthor["title"]); ?>">
+										</i>
+										<?php if (!empty($item["author_name"])): ?>
+											<h6><?php echo esc_html($item["author_name"]); ?></h6>
+										<?php endif; ?>
+									</div>
+								</div>
+							</article>
 						</div>
-					</article>
-				</div>
-				<div class="tab-pane fade" id="juan" role="tabpanel" aria-labelledby="juan-tab" tabindex="0">
-					<article class="card-extios">
-						<figure>
-							<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-2.jpg" alt="">
-						</figure>
-						<div class="info">
-							<p>“Oppen Colombia sigue marcando la diferencia con su compromiso, calidad y trabajo responsable. ¡Un gran ejemplo de mejora continua!”</p>
-							<div class="avatar">
-								<i>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-2-avatar.png" alt="">
-								</i>
-								<h6>Juan Camilo Mendoza Nubia by toral</h6>
+					<?php endforeach; ?>
+					<!-- 	<div class="tab-pane fade show active" id="santiago" role="tabpanel" aria-labelledby="santiago-tab" tabindex="0">
+						<article class="card-extios">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1.jpg" alt="">
+							</figure>
+							<div class="info">
+								<p>“Oppen se ha consolidado como un aliado estratégico para La caja de comensación en el fortalecimiento de nuestra oferta corporativa. Su versatilidad, agilidad y compromiso con la calidad se reflejan en cada servicio y producto que nos brindan, aportando valor y confianza en cada entrega”</p>
+								<div class="avatar">
+									<i>
+										<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1-avatar.png" alt="">
+									</i>
+									<h6>Santiago Loaiza lalinde Comfama</h6>
+								</div>
 							</div>
-						</div>
-					</article>
-				</div>
-				<div class="tab-pane fade" id="jannet" role="tabpanel" aria-labelledby="jannet-tab" tabindex="0">
-					<article class="card-extios">
-						<figure>
-							<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1.jpg" alt="">
-						</figure>
-						<div class="info">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eaque, laborum ipsam illum nam doloremque! Quo illo, aspernatur sequi recusandae aperiam magnam quidem quod beatae earum fugit iste animi pariatur.</p>
-							<div class="avatar">
-								<i>
-									<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1-avatar.png" alt="">
-								</i>
-								<h6>Jannet alzate Constructora serving</h6>
+						</article>
+					</div>
+					<div class="tab-pane fade" id="juan" role="tabpanel" aria-labelledby="juan-tab" tabindex="0">
+						<article class="card-extios">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-2.jpg" alt="">
+							</figure>
+							<div class="info">
+								<p>“Oppen Colombia sigue marcando la diferencia con su compromiso, calidad y trabajo responsable. ¡Un gran ejemplo de mejora continua!”</p>
+								<div class="avatar">
+									<i>
+										<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-2-avatar.png" alt="">
+									</i>
+									<h6>Juan Camilo Mendoza Nubia by toral</h6>
+								</div>
 							</div>
+						</article>
+					</div>
+					<div class="tab-pane fade" id="jannet" role="tabpanel" aria-labelledby="jannet-tab" tabindex="0">
+						<article class="card-extios">
+							<figure>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1.jpg" alt="">
+							</figure>
+							<div class="info">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eaque, laborum ipsam illum nam doloremque! Quo illo, aspernatur sequi recusandae aperiam magnam quidem quod beatae earum fugit iste animi pariatur.</p>
+								<div class="avatar">
+									<i>
+										<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/caso-1-avatar.png" alt="">
+									</i>
+									<h6>Jannet alzate Constructora serving</h6>
+								</div>
+							</div>
+						</article>
+					</div> -->
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+
+		</div>
+	</section>
+<?php endif; ?>
+<?php
+$form = get_field("form_section");
+
+if ($form  && $form['enable_section'] && !empty($form['form']) || $form && $form['enable_section'] && !empty($form['section_title']) || !empty($form['description'])):
+	$contactChoice = $form['choice_form'];
+	$contactInfo = $form['contact_info'];
+
+?>
+	<section id="contacto" class="main-contacto relative clear-fix">
+		<div class="wrapper-main center">
+			<div class="grid-contacto">
+				<arcicle class="card-contacto">
+
+					<?php if (!empty($form['section_title']) || !empty($form['description'])): ?>
+						<div class="top-contacto">
+							<?php if (!empty($form['section_title'])) : ?>
+								<h3><?php echo esc_html($form['section_title']); ?></h3>
+							<?php endif; ?>
+							<?php if (!empty($form['description'])) {
+								echo wp_kses_post($form['description']);
+							}; ?>
+							<?php if (!empty($form['info'])) : ?>
+								<h5><?php echo $form['info']; ?></h5>
+							<?php endif; ?>
 						</div>
-					</article>
-				</div>
-			</div>
-		</section>
+					<?php endif; ?>
+					<?php if (!empty($contactInfo)): ?>
+						<div class="info">
 
+							<ul>
+								<?php foreach ($contactInfo as $contactInfo):
+									$choice = ["choie_info"];
+									if ($choice == "whatsaap "): ?>
+										<li class="icon-ws">Whats app business <a href="<?php echo esc_url($contact['whatsapp']['url']); ?>" target="<?php echo ($contact['whatsapp']['target']) ? esc_html($contact['whatsapp']['target']) : '_self'; ?>"><?php echo esc_html($contact['whatsapp']['title']); ?></a> </li>
+									<?php endif; ?>
 
+								<?php endforeach; ?>
 
+								<!-- 	<li class="icon-ws">Whats app business <a href="https://wa.me/+573218033728" target="_blank">+57 3218033728</a> </li>
+							<li class="icon-dir">Calle 36 aa sur b 99 envigado antioquia colombia</li>
+							<li class="icon-mail"><a href="mailto:Comercialoppen1@gmail.com" target="_blank">Comercialoppen1@gmail.com</a> <br> <a href="mailto:oppencolombia@gmail.com" target="_blank">oppencolombia@gmail.com</a></li> -->
+							</ul>
+						</div>
+					<?php endif; ?>
+				</arcicle>
+				<?php
+				if ($form && !empty($form['choice_form'])):
 
-
-
-
-
-
-	</div>
-</section>
-
-<section id="contacto" class="main-contacto relative clear-fix">
-	<div class="wrapper-main center">
-		<div class="grid-contacto">
-			<arcicle class="card-contacto">
-				<div class="top-contacto">
-					<h3>Contáctanos</h3>
-					<h4>Lanza un plan <br>de beneficios que <br>tu equipo amará</h4>
-					<h5>Ponte en contacto con nuestro equipo para saber <br>cómo podemos ayudarte a optimizar el presupuesto <br> de tus beneficios.</h5>
-				</div>
-				<div class="info">
-					<ul>
-						<li class="icon-ws">Whats app business <a href="https://wa.me/+573218033728" target="_blank">+57 3218033728</a> </li>
-						<li class="icon-dir">Calle 36 aa sur b 99 envigado antioquia colombia</li>
-						<li class="icon-mail"><a href="mailto:Comercialoppen1@gmail.com" target="_blank">Comercialoppen1@gmail.com</a> <br> <a href="mailto:oppencolombia@gmail.com" target="_blank">oppencolombia@gmail.com</a></li>
-					</ul>
-				</div>
-			</arcicle>
-			<div class="main-form">
-				<?php echo do_shortcode("[contact-form-7 id='d8a378c' title='Formulario de contacto']"); //echo do_shortcode("[contact-form-7 id='c019156' title='Formulario de contacto']"); 
 				?>
+					<div class="main-form">
+						<?php /*** Form */
+						echo do_shortcode(sprintf('[contact-form-7 id="%1$s" title="%2$s"]', $contactChoice->ID, $contactChoice->post_title));
+						?>
+
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-
+<?php endif; ?>
 <?php get_footer(); ?>
