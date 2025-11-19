@@ -65,16 +65,18 @@
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	<?php
 	$bannerPauta = get_field('pauta', 'option');
+	if ($bannerPauta && isset($bannerPauta['url'])):
+		$bannerUrl = get_field('banner_url', 'option');
 
 	?>
-	<section class="banner-pauta full clear-fix">
-		<figure>
-			<img src="<?php echo ($bannerPauta)
-									? esc_url($bannerPauta["url"])
-									: get_stylesheet_directory_uri() . '/library/images/banner-pauta.jpg'; ?>" alt="Banner pauta">
-
-		</figure>
-	</section>
+		<section class="banner-pauta full clear-fix">
+			<figure>
+				<a href="<?php echo esc_url($bannerUrl); ?>" target="_self">
+					<img src="<?php echo esc_url($bannerPauta['url']); ?>" alt="Banner pauta">
+				</a>
+			</figure>
+		</section>
+	<?php endif; ?>
 	<header class="full clear-fix">
 		<!-- Menú hamburguesa -->
 		<div id="nav-toogle">
