@@ -8,24 +8,41 @@ $productsCat = get_terms(array(
 	'parent'     => 0,
 
 ));
-?>
-<section class="banner-campanas relative clear-fix">
-	<div class="swiper swiper-banner-campanas">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<figure>
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/banner-camapanas.jpg" alt="">
-				</figure>
+
+
+
+$bannerSection = get_field("banner_section");
+
+
+if ($bannerSection && $bannerSection['enable_section'] && !empty($bannerSection["banners"])):
+	$banners = $bannerSection["banners"]; ?>
+
+	<section class="banner-campanas relative clear-fix">
+		<div class="swiper swiper-banner-campanas">
+			<div class="swiper-wrapper">
+				<?php foreach ($banners as $banner):
+					$image = $banner["image"]; ?>
+					<div class="swiper-slide">
+						<figure>
+
+							<img src="<?php echo esc_url($image["url"]); ?>" alt="<?php echo esc_attr($image["title"]); ?>">
+
+						</figure>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+<?php endif; ?>
 
 <section id="portafolio" class="main-producto-general relative clear-fix">
 	<div class="wrapper-main center">
 		<div class="main-portafolio-gral">
-			<h1>Portafolio</h1>
-			<h3>Soluciones para tus planes <br>de beneficios</h3>
+			<?php the_title('<h1>', '</h1>'); ?>
+			<?php if (get_the_content()) {
+				the_content();
+			}; ?>
+
 			<div class="grid-portafolio-filtro">
 				<?php if (!empty($productsCat) && !is_wp_error($productsCat)): $category = wp_list_pluck($productsCat, 'name'); ?>
 
@@ -38,17 +55,49 @@ $productsCat = get_terms(array(
 
 								?>
 									<li id="" class="category-vida" data-filter="<?php echo  esc_attr($product->slug); ?> ">
-										<label for="vida">
+										<label for="<?php echo esc_attr($product->slug); ?>">
 											<input type="checkbox" id="<?php echo  esc_attr($product->slug); ?>" name="<?php echo  esc_attr($product->slug); ?>">
 											<h6 style="background-color:<?php echo esc_attr($taxcolor); ?>">
-												<i>
-													<img src="<?php echo esc_url($taxicon["url"]); ?>" alt="<?php echo esc_attr($taxicon["title"]); ?>">
-												</i>
+												<?php if (!empty($taxicon["url"])): ?>
+													<i>
+														<img src="<?php echo esc_url($taxicon["url"]); ?>" alt="<?php echo esc_attr($taxicon["title"]); ?>">
+													</i>
+												<?php endif; ?>
 												<span><?php echo  esc_html($product->name); ?></span>
 											</h6>
 										</label>
+										<?php
+										$temporadas_term = get_term_by('name', 'Temporadas', 'products_cat');
+
+										if ($temporadas_term) {
+											$child_terms = get_terms([
+												'taxonomy'   => 'products_cat',
+												'hide_empty' => false,
+												'parent'     => $temporadas_term->term_id,
+											]);
+										}
+
+
+										if (!empty($child_terms) && !is_wp_error($child_terms) && $product->slug == "temporadas"): ?>
+											<ul class="child-category">
+												<?php foreach ($child_terms as $child) : ?>
+													<li class="category-vida" data-filter="<?php echo esc_attr($child->slug); ?>">
+														<label for="<?php echo esc_attr($child->slug); ?>">
+															<input type="checkbox" id="<?php echo esc_attr($child->slug); ?>" name="<?php echo esc_attr($child->slug); ?>">
+
+
+															<span style="background-color:<?php echo ($taxcolor) ?  esc_attr($taxcolor) : "#8d5394"; ?>"><?php echo ucfirst(esc_html(strtolower($child->name))); ?>
+															</span>
+
+														</label>
+													</li>
+												<?php endforeach; ?>
+											</ul>
+										<?php endif; ?>
+
 									</li>
 								<?php endforeach; ?>
+
 								<!-- <li id="" class="category-vida">
 								<label for="vida">
 									<input type="checkbox" id="vida" name="vida">
