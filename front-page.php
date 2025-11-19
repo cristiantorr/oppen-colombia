@@ -157,7 +157,8 @@ if ($categories && $categories['enable_section'] && !empty($categories["choice_c
 					<?php foreach ($choiceCategories as $category):
 						$taxcolor = get_field("tax_color", "term_" . $category->term_id);
 						$taxicon  = get_field("tax_icon", "term_" . $category->term_id);
-						$taximage  = get_field("tax_image", "term_" . $category->term_id); ?>
+						$taximage  = get_field("tax_image", "term_" . $category->term_id);
+					?>
 						<article class="card-portafolio vida" style="background-color:<?php echo esc_attr($taxcolor); ?>">
 							<figure>
 								<img src="<?php echo esc_url($taximage["url"]); ?>" alt="">
@@ -169,7 +170,9 @@ if ($categories && $categories['enable_section'] && !empty($categories["choice_c
 								</h4>
 								<p><?php echo wp_kses_post($category->description); ?></p>
 
-								<a href="<?php echo site_url("portafolio?filter=estilo-de-vida"); ?>" class="btn-more">Ver productos</a>
+								<a href="<?php echo esc_url(add_query_arg('filter', $category->slug, site_url('portafolio'))); ?>" class="btn-more">
+									Ver productos
+								</a>
 							</div>
 						</article>
 					<?php endforeach; ?>
@@ -424,10 +427,22 @@ if ($form  && $form['enable_section'] && !empty($form['form']) || $form && $form
 						<div class="info">
 
 							<ul>
-								<?php foreach ($contactInfo as $contactInfo):
-									$choice = ["choie_info"];
-									if ($choice == "whatsaap "): ?>
-										<li class="icon-ws">Whats app business <a href="<?php echo esc_url($contact['whatsapp']['url']); ?>" target="<?php echo ($contact['whatsapp']['target']) ? esc_html($contact['whatsapp']['target']) : '_self'; ?>"><?php echo esc_html($contact['whatsapp']['title']); ?></a> </li>
+								<?php foreach ($contactInfo as $contact):
+									$choice = $contact["choie_info"];
+
+									if ($choice == "whatsaap"): ?>
+										<li class="icon-ws"><?php echo esc_html($contact["ws_text"]); ?> <a href="https://wa.me/<?php echo esc_attr($contact["ws_number"]); ?>" target="_blank"><?php echo esc_html($contact["ws_number"]); ?> </a> </li>
+									<?php endif; ?>
+									<?php if ($choice == "location"): ?>
+										<li class="icon-dir"><?php echo esc_html($contact['location']); ?></li>
+									<?php endif; ?>
+									<?php if ($choice == "email"): ?>
+										<li class="icon-mail">
+											<?php foreach ($contact["gmail"] as $email):
+												$emailField = $email["email_field"]; ?>
+												<a href="mailto:<?php echo esc_html($emailField); ?>" target="_blank"><?php echo esc_html($emailField); ?></a>
+											<?php endforeach; ?>
+										</li>
 									<?php endif; ?>
 
 								<?php endforeach; ?>
