@@ -272,6 +272,24 @@ jQuery(document).ready(function ($) {
       },
     });
   }
+  if (jQuery(".swiper-banner-campanas").length > 0) {
+    var swiper = new Swiper(".swiper-banner-campanas", {
+      spaceBetween: 0,
+      effect: "fade",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".pagination-home",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".next-home",
+        prevEl: ".prev-home",
+      },
+    });
+  }
 
   if (jQuery(".swiper-gallery").length > 0) {
     var swiper = new Swiper(".swiper-gallery", {
@@ -319,21 +337,17 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  // Menu responsive type accordion
   if (screen.width < 769) {
     jQuery("header nav ul li a").click(function () {
       var isOpen = jQuery(this).next().is(":visible");
 
-      // Cierra todos los elementos desplegables excepto el que se está tocando
       jQuery("header nav ul li ul").not(jQuery(this).next()).slideUp();
 
-      // Agrega o remueve la clase "current" según el estado del elemento desplegable
       jQuery("header nav ul li").removeClass("current");
       if (!isOpen) {
         jQuery(this).parent().addClass("current");
       }
 
-      // Alterna el estado del elemento desplegable asociado al enlace clicado
       jQuery(this).next().slideToggle();
     });
   }
@@ -343,46 +357,50 @@ jQuery(document).ready(function ($) {
    */
 
   if (jQuery(".products-portafolio").length > 0) {
-    // Al hacer clic en el LI, alternamos el checkbox
     jQuery(".filter-oppen ul li").on("click", function (e) {
-      // Evitar conflicto si se hace clic directamente sobre el input
-      if (jQuery(e.target).is("input")) return;
+      const $items = $(".filter-oppen").find("li");
 
-      let checkbox = jQuery(this).find("input[type='checkbox']");
-      checkbox.prop("checked", !checkbox.prop("checked")).trigger("change");
+      const $match = $items
+        .filter(function () {
+          const df = ($(this).attr("data-filter") || "").trim().toLowerCase();
+          return df === filter;
+        })
+        .first();
+
+      if ($match.length) {
+        setTimeout(() => {
+          console.log("Haciendo click en:", $match);
+
+          const clickable = $match.find('input[type="checkbox"]').first();
+          clickable.trigger("click");
+        }, 500);
+      }
     });
 
-    // Cuando cambia el estado del checkbox, filtramos
     jQuery(".filter-oppen ul li input[type='checkbox']").on(
       "change",
       function () {
         let selectedTerms = [];
 
-        // Recorremos todos los que están activos
         jQuery(".filter-oppen ul li input[type='checkbox']:checked").each(
           function () {
             selectedTerms.push(jQuery(this).closest("li").attr("data-filter"));
           }
         );
 
-        //console.log("Términos seleccionados:", selectedTerms);
-
-        // Si hay al menos uno seleccionado → aplicar filtro
         if (selectedTerms.length > 0) {
           var data = {
             target: "alm-products",
             taxonomy: "products_cat",
-            taxonomyTerms: selectedTerms.join(","), // soporte para varios
+            taxonomyTerms: selectedTerms.join(","),
             taxonomyOperator: "IN",
           };
           ajaxloadmore.filter("fade", 300, data);
-        }
-        // Si ninguno está seleccionado → mostrar todo
-        else {
+        } else {
           ajaxloadmore.filter("fade", 300, {
             target: "alm-products",
             taxonomy: "products_cat",
-            taxonomyTerms: "", // sin términos = sin filtro
+            taxonomyTerms: "",
           });
         }
       }
@@ -397,16 +415,15 @@ jQuery(document).ready(function ($) {
         currentSearch = jQuery("#search").val().trim();
         console.log("Buscando:", currentSearch);
 
-        // Evita ejecutar si no hay nada escrito (opcional)
         if (currentSearch.length < 2 && currentSearch.length !== 0) {
           return;
         }
 
         var data = {
-          target: "alm-products", // ID de tu shortcode Ajax Load More
+          target: "alm-products",
           taxonomy: "products_cat",
           taxonomyOperator: "IN",
-          search: currentSearch, // lo que escribió el usuario
+          search: currentSearch,
         };
 
         ajaxloadmore.filter("fade", 300, data);
@@ -414,26 +431,26 @@ jQuery(document).ready(function ($) {
   }
 
   if (jQuery("#portafolio").length > 0) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const filterParam = urlParams.get("filter");
+    const params = new URLSearchParams(window.location.search);
+    const filter = (params.get("filter") || "").trim().toLowerCase();
+    if (!filter) return;
 
-    if (!filterParam) return;
+    const $items = $(".filter-oppen").find("li");
 
-    // Dividir filtros, limpiar espacios y pasar todo a minúsculas
-    const filters = filterParam.split(",").map((f) => f.trim().toLowerCase());
+    const $match = $items
+      .filter(function () {
+        const df = ($(this).attr("data-filter") || "").trim().toLowerCase();
+        return df === filter;
+      })
+      .first();
 
-    setTimeout(() => {
-      $(".filter-oppen ul li").each(function () {
-        const liFilter = ($(this).attr("data-filter") || "")
-          .trim()
-          .toLowerCase();
+    if ($match.length) {
+      setTimeout(() => {
+        console.log("Haciendo click en:", $match);
 
-        // Verificar si el valor del li está dentro de los filtros
-        if (filters.includes(liFilter)) {
-          console.log("✔ Llega filtro:", liFilter);
-          $(this).trigger("click"); // Forzar clic
-        }
-      });
-    }, 500); // puede subir a 800ms si el contenido llega después del load
+        const clickable = $match.find('input[type="checkbox"]').first();
+        clickable.trigger("click");
+      }, 500);
+    }
   }
 }); /* end of as page load scripts */

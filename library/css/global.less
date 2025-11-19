@@ -1352,6 +1352,60 @@ footer {
     width: 100%;
     display: block;
   }
+
+  /* categorias hijas portafolio */
+
+  .filter-oppen .child-category {
+    list-style: none;
+    margin: 8px 0 0 0;
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    align-items: flex-end;
+  }
+
+  .filter-oppen .child-category > li {
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .filter-oppen .child-category > li > label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .filter-oppen .child-category input[type="checkbox"] {
+    margin: 0 15px 0 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+  }
+
+  .filter-oppen .child-category > li > label > span {
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 15px;
+    background: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .filter-oppen .child-category {
+    margin-left: 24px;
+  }
 }
 
 /* ------------------------------Ipad Horizontal---------------------------- */
@@ -1624,6 +1678,20 @@ footer {
     width: fit-content;
     bottom: -13px;
     left: 0;
+  }
+
+  /* estilo categorias hijas portafolio*/
+  .filter-oppen .child-category > li {
+    width: 160px;
+  }
+
+  .clear-fix .filter-oppen .child-category {
+    align-items: flex-start;
+  }
+
+  .filter-oppen .child-category > li > label > span {
+    padding: 8px 10px;
+    font-size: 13px;
   }
 }
 
