@@ -34,10 +34,12 @@
 					<p>© <?php echo date("Y"); ?>, <?php echo (!empty($copyright)) ? esc_html($copyright) : "Oppen Colombia. Diseño de páginas Web por FLOW DIGITAL"; ?></p>
 				</div>
 			</footer>
+			<?php $advisor = get_field('advisor', 'option');
 
+			?>
 			<div class="btn-fixed">
 				<div class="ws">
-					<a href="https://wa.me/+573218033728" target="_blank">
+					<a href="https://wa.me/<?php echo esc_attr($advisor); ?>" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/ws.png" alt="">
 					</a>
 				</div>
