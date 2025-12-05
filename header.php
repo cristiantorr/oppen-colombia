@@ -65,16 +65,26 @@
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	<?php
 	$bannerPauta = get_field('pauta', 'option');
-	if ($bannerPauta && isset($bannerPauta['url'])):
+	if (!empty($bannerPauta["banners_promotion"])):
 		$bannerUrl = get_field('banner_url', 'option');
 
 	?>
 		<section class="banner-pauta full clear-fix">
-			<figure>
+			<div class="swiper swiper-banner-home">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<figure>
+							<a href="<?php echo esc_url($bannerUrl); ?>" target="_self">
+								<img src="<?php echo esc_url($bannerPauta['url']); ?>" alt="Banner pauta">
+							</a>
+						</figure>
+					</div>
+
+					<!-- <figure>
 				<a href="<?php echo esc_url($bannerUrl); ?>" target="_self">
 					<img src="<?php echo esc_url($bannerPauta['url']); ?>" alt="Banner pauta">
 				</a>
-			</figure>
+			</figure> -->
 		</section>
 	<?php endif; ?>
 	<header class="full clear-fix">
@@ -92,14 +102,7 @@
 				</a>
 			</figure>
 			<nav class="main-nav">
-				<!-- 	<ul>
-					<li><a href="<?php echo home_url(); ?>#quienes-somos">Quienes somos</a></li>
-					<li><a href="<?php echo home_url(); ?>#portafolio">Portafolio</a></li>
-					<li><a href="<?php echo home_url(); ?>#clientes">Clientes</a></li>
-					<li><a href="<?php echo home_url(); ?>#aliados">Aliados</a></li>
-					<li><a href="<?php echo home_url(); ?>#casos-exito">Casos de éxito</a></li>
-					<li class="btn-contacto"><a href="#contacto">Contacto</a></li>
-				</ul> -->
+
 				<?php if (has_nav_menu('main-nav')): ?>
 
 					<?php wp_nav_menu(array(
