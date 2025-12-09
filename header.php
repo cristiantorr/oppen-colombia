@@ -63,32 +63,9 @@
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-	<?php
-	$bannerPauta = get_field('pauta', 'option');
-	if (!empty($bannerPauta["banners_promotion"])):
-		$bannerUrl = get_field('banner_url', 'option');
 
-	?>
-		<section class="banner-pauta full clear-fix">
-			<div class="swiper swiper-banner-home">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<figure>
-							<a href="<?php echo esc_url($bannerUrl); ?>" target="_self">
-								<img src="<?php echo esc_url($bannerPauta['url']); ?>" alt="Banner pauta">
-							</a>
-						</figure>
-					</div>
-
-					<!-- <figure>
-				<a href="<?php echo esc_url($bannerUrl); ?>" target="_self">
-					<img src="<?php echo esc_url($bannerPauta['url']); ?>" alt="Banner pauta">
-				</a>
-			</figure> -->
-		</section>
-	<?php endif; ?>
 	<header class="full clear-fix">
-		<!-- Menú hamburguesa -->
+
 		<div id="nav-toogle">
 			<span></span>
 			<span></span>
@@ -121,3 +98,30 @@
 		</div>
 
 	</header>
+	<?php
+	$bannerPauta = get_field('pauta_item', 'option');
+	if (!empty($bannerPauta)):
+
+
+	?>
+		<section class="banner-pauta full clear-fix">
+			<div class="swiper swiper-banner-home">
+				<div class="swiper-wrapper">
+					<?php foreach ($bannerPauta as $banner) :
+						$banner_link =  !empty($banner["link_banner"]) ? $banner["link_banner"] : false;
+
+						$banner_image = $banner["banners_promotion"]; ?>
+
+
+						<div class="swiper-slide">
+							<figure>
+								<a href="<?php echo ($banner_link) ? esc_url($banner_link['url']) : 'javascript:;' ?>" target="<?php echo ($banner_link) ? esc_html($banner_link['target']) : '_self'; ?>">
+									<img src="<?php echo esc_url($banner_image['url']); ?>" alt="<?php echo esc_attr($banner_image['title']); ?>">
+								</a>
+							</figure>
+						</div>
+					<?php endforeach; ?>
+
+
+		</section>
+	<?php endif; ?>
