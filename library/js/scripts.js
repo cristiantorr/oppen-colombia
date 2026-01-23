@@ -369,8 +369,6 @@ jQuery(document).ready(function ($) {
 
       if ($match.length) {
         setTimeout(() => {
-          console.log("Haciendo click en:", $match);
-
           const clickable = $match.find('input[type="checkbox"]').first();
           clickable.trigger("click");
         }, 500);
