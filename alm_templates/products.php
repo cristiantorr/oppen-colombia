@@ -2,11 +2,13 @@
 $taxcolor = get_field("tax_color", "term_" . $productsCat[0]->term_id);
 $taxicon  = get_field("tax_icon", "term_" . $productsCat[0]->term_id);
 $productName = get_the_title();
+$detailProduct = get_field("detail_prod");
+
 /* $phone = '573218033728';
 $mensaje = urlencode("Estoy interesado en este producto: $productName");
 $whatsapp_url = "https://wa.me/$phone?text=$mensaje"; */
 ?>
-<article class="card-product category-vida <?php echo 'prod-' . get_the_ID(); ?>">
+<article class="card-product category-vida <?php echo 'prod-' . get_the_ID(); ?>" data-desc="<?php echo esc_html($detailProduct["prod_desc"]); ?>" data-list="<?php echo esc_html($detailProduct["prod_list"]); ?>">
 
   <figure>
     <?php if (has_post_thumbnail()): $featuredimgurl = get_the_post_thumbnail_url($articles->ID, 'bones-thumb-528'); ?>
