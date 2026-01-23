@@ -73,10 +73,13 @@
 			<span></span>
 		</div>
 		<div class="wrapper-main center flex flex-center">
+			<?php $logoPrimary = get_field('logo_first', 'option');
+
+			?>
 			<figure class="logo">
-				<a href="<?php echo home_url(); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/library/' ?>images/logo-oppen-colombia.png" alt="">
-				</a>
+				<img src="<?php echo ($logoPrimary)
+										? esc_url($logoPrimary["url"])
+										: get_stylesheet_directory_uri() . '/library/images/logo-oppen-colombia.png'; ?>" alt="logo footer">
 			</figure>
 			<nav class="main-nav">
 
